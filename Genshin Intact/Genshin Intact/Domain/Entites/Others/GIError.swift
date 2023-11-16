@@ -15,4 +15,8 @@ public enum GIError: Error {
     case decodingIssue
     case invalidEndPoint
     
+    // MARK: API
+    case badAPIRequest
+    case notFound
+    
 }

@@ -21,6 +21,7 @@
 		7061990A2B06891D00762BAF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199092B06891D00762BAF /* NetworkService.swift */; };
 		7061990C2B068C6800762BAF /* EndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061990B2B068C6800762BAF /* EndpointRouter.swift */; };
 		706199102B06A1C900762BAF /* GIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061990F2B06A1C900762BAF /* GIError.swift */; };
+		706199132B06A3DE00762BAF /* MainNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199122B06A3DE00762BAF /* MainNetworkService.swift */; };
 		B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */; };
 		B595E8A36F5A70330F8F08BA /* Pods_Genshin_IntactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		706199092B06891D00762BAF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7061990B2B068C6800762BAF /* EndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointRouter.swift; sourceTree = "<group>"; };
 		7061990F2B06A1C900762BAF /* GIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIError.swift; sourceTree = "<group>"; };
+		706199122B06A3DE00762BAF /* MainNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkService.swift; sourceTree = "<group>"; };
 		8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.release.xcconfig"; sourceTree = "<group>"; };
 		84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin IntactTests.debug.xcconfig"; path = "Target Support Files/Pods-Genshin IntactTests/Pods-Genshin IntactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_IntactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 			children = (
 				706199032B0685D200762BAF /* Models */,
 				706199082B0688FB00762BAF /* Protocols */,
+				706199112B06A3BB00762BAF /* Implementation */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -250,6 +253,14 @@
 				7061990F2B06A1C900762BAF /* GIError.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		706199112B06A3BB00762BAF /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				706199122B06A3DE00762BAF /* MainNetworkService.swift */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 		8A2F44DFED59382193FD56ED /* Pods */ = {
@@ -516,6 +527,7 @@
 				7061990C2B068C6800762BAF /* EndpointRouter.swift in Sources */,
 				706198D02B067F7500762BAF /* HomeViewController.swift in Sources */,
 				706199102B06A1C900762BAF /* GIError.swift in Sources */,
+				706199132B06A3DE00762BAF /* MainNetworkService.swift in Sources */,
 				706199052B0685E400762BAF /* Config.swift in Sources */,
 				706198CC2B067F7500762BAF /* AppDelegate.swift in Sources */,
 				706199072B0688AB00762BAF /* HTTPMethod.swift in Sources */,
