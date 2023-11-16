@@ -19,13 +19,13 @@ class MainNetworkService: NetworkService {
                 URLSession.shared.dataTask(with: urlRequest) { data, response, _ in
                     // Log response body if possible
                     if let data = data, let decodedResponseBody = String(data: data, encoding: .utf8) {
-                        print("LOG:: 🔗 \(urlRequest.url!) - ✅ Data: \(decodedResponseBody)")
+                        print("LOG:: \n 🔗 \(urlRequest.url!) \n ✅ \(decodedResponseBody)")
                     }
                     
                     // Check for errors
                     if let httpResponse = response as? HTTPURLResponse,
                        !(200 ... 299).contains(httpResponse.statusCode) {
-                        print("LOG:: 🔗 \(urlRequest.url!) - ⚠️ Error: \(response.debugDescription)")
+                        print("LOG:: \n 🔗 \(urlRequest.url!) \n ⚠️ \(response.debugDescription)")
                                                 
                         // handle default errors
                         switch httpResponse.statusCode {
@@ -39,14 +39,14 @@ class MainNetworkService: NetworkService {
                     // Try to decode response
                     do {
                         guard let data = data else {
-                            print("LOG:: 🔗 \(urlRequest.url!) - ⚠️ Doesn't have any data")
+                            print("LOG:: \n 🔗 \(urlRequest.url!) \n ⚠️ Doesn't have any data")
                             seal.reject(GIError.decodingIssue)
                             return
                         }
                         let decodedObject = try JSONDecoder().decode(T.self, from: data)
                         seal.fulfill(decodedObject)
                     } catch {
-                        print("LOG:: 🔗 \(urlRequest.url!) - ⚠️ Decoding error: \(error)")
+                        print("LOG:: \n 🔗 \(urlRequest.url!) \n ⚠️ Decoding error: \(error)")
                         seal.reject(GIError.decodingIssue)
                     }
                 }.resume()
