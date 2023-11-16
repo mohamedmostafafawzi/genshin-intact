@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B70AA9172A6DC963AEE2F38 /* Pods_Genshin_Intact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B01EA1E82C66A73BED6C48 /* Pods_Genshin_Intact.framework */; };
 		706198CC2B067F7500762BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706198CB2B067F7500762BAF /* AppDelegate.swift */; };
 		706198CE2B067F7500762BAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706198CD2B067F7500762BAF /* SceneDelegate.swift */; };
 		706198D02B067F7500762BAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706198CF2B067F7500762BAF /* HomeViewController.swift */; };
@@ -17,6 +18,11 @@
 		706198EF2B067F7900762BAF /* Genshin_IntactUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706198EE2B067F7900762BAF /* Genshin_IntactUITestsLaunchTests.swift */; };
 		706199052B0685E400762BAF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199042B0685E300762BAF /* Config.swift */; };
 		706199072B0688AB00762BAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199062B0688AB00762BAF /* HTTPMethod.swift */; };
+		7061990A2B06891D00762BAF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199092B06891D00762BAF /* NetworkService.swift */; };
+		7061990C2B068C6800762BAF /* EndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061990B2B068C6800762BAF /* EndpointRouter.swift */; };
+		706199102B06A1C900762BAF /* GIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061990F2B06A1C900762BAF /* GIError.swift */; };
+		B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */; };
+		B595E8A36F5A70330F8F08BA /* Pods_Genshin_IntactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		357B804FACA29D3269A7A5C7 /* Pods-Genshin IntactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin IntactTests.release.xcconfig"; path = "Target Support Files/Pods-Genshin IntactTests/Pods-Genshin IntactTests.release.xcconfig"; sourceTree = "<group>"; };
+		39CFD4C36A72B26A647E3D9B /* Pods-Genshin Intact-Genshin IntactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact-Genshin IntactUITests.debug.xcconfig"; path = "Target Support Files/Pods-Genshin Intact-Genshin IntactUITests/Pods-Genshin Intact-Genshin IntactUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4FB1047ACEEF53874BC036B4 /* Pods-Genshin Intact-Genshin IntactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact-Genshin IntactUITests.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact-Genshin IntactUITests/Pods-Genshin Intact-Genshin IntactUITests.release.xcconfig"; sourceTree = "<group>"; };
+		57B5FE3DD5034B1EE39A6420 /* Pods-Genshin Intact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.debug.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.debug.xcconfig"; sourceTree = "<group>"; };
 		706198C82B067F7500762BAF /* Genshin Intact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Genshin Intact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		706198CB2B067F7500762BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		706198CD2B067F7500762BAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +61,14 @@
 		706198EE2B067F7900762BAF /* Genshin_IntactUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genshin_IntactUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		706199042B0685E300762BAF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		706199062B0688AB00762BAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		706199092B06891D00762BAF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7061990B2B068C6800762BAF /* EndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointRouter.swift; sourceTree = "<group>"; };
+		7061990F2B06A1C900762BAF /* GIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIError.swift; sourceTree = "<group>"; };
+		8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.release.xcconfig"; sourceTree = "<group>"; };
+		84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin IntactTests.debug.xcconfig"; path = "Target Support Files/Pods-Genshin IntactTests/Pods-Genshin IntactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_IntactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7B01EA1E82C66A73BED6C48 /* Pods_Genshin_Intact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_Intact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_Intact_Genshin_IntactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B70AA9172A6DC963AEE2F38 /* Pods_Genshin_Intact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B595E8A36F5A70330F8F08BA /* Pods_Genshin_IntactTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +106,8 @@
 				706198E12B067F7900762BAF /* Genshin IntactTests */,
 				706198EB2B067F7900762BAF /* Genshin IntactUITests */,
 				706198C92B067F7500762BAF /* Products */,
+				8A2F44DFED59382193FD56ED /* Pods */,
+				F53A39F803ADF34E1F6DDF13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +163,7 @@
 		706198FC2B0683E200762BAF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				7061990D2B068CBC00762BAF /* Entites */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -189,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				706199032B0685D200762BAF /* Models */,
+				706199082B0688FB00762BAF /* Protocols */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -202,6 +227,54 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		706199082B0688FB00762BAF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				706199092B06891D00762BAF /* NetworkService.swift */,
+				7061990B2B068C6800762BAF /* EndpointRouter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7061990D2B068CBC00762BAF /* Entites */ = {
+			isa = PBXGroup;
+			children = (
+				7061990E2B068CDC00762BAF /* Others */,
+			);
+			path = Entites;
+			sourceTree = "<group>";
+		};
+		7061990E2B068CDC00762BAF /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				7061990F2B06A1C900762BAF /* GIError.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		8A2F44DFED59382193FD56ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57B5FE3DD5034B1EE39A6420 /* Pods-Genshin Intact.debug.xcconfig */,
+				8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */,
+				39CFD4C36A72B26A647E3D9B /* Pods-Genshin Intact-Genshin IntactUITests.debug.xcconfig */,
+				4FB1047ACEEF53874BC036B4 /* Pods-Genshin Intact-Genshin IntactUITests.release.xcconfig */,
+				84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */,
+				357B804FACA29D3269A7A5C7 /* Pods-Genshin IntactTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F53A39F803ADF34E1F6DDF13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7B01EA1E82C66A73BED6C48 /* Pods_Genshin_Intact.framework */,
+				DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */,
+				94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 706198F22B067F7900762BAF /* Build configuration list for PBXNativeTarget "Genshin Intact" */;
 			buildPhases = (
+				4A49E7687F4E0F465167F9CB /* [CP] Check Pods Manifest.lock */,
 				706198C42B067F7500762BAF /* Sources */,
 				706198C52B067F7500762BAF /* Frameworks */,
 				706198C62B067F7500762BAF /* Resources */,
+				ABBB4082E26CD20C5CD45A05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +301,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 706198F52B067F7900762BAF /* Build configuration list for PBXNativeTarget "Genshin IntactTests" */;
 			buildPhases = (
+				8AD925A8257DB79AFDD0EF26 /* [CP] Check Pods Manifest.lock */,
 				706198DA2B067F7900762BAF /* Sources */,
 				706198DB2B067F7900762BAF /* Frameworks */,
 				706198DC2B067F7900762BAF /* Resources */,
@@ -244,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 706198F82B067F7900762BAF /* Build configuration list for PBXNativeTarget "Genshin IntactUITests" */;
 			buildPhases = (
+				085EE2DF9CC0020A0614FD22 /* [CP] Check Pods Manifest.lock */,
 				706198E42B067F7900762BAF /* Sources */,
 				706198E52B067F7900762BAF /* Frameworks */,
 				706198E62B067F7900762BAF /* Resources */,
+				FABC38D4565551222E411CA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,7 +360,7 @@
 				};
 			};
 			buildConfigurationList = 706198C32B067F7500762BAF /* Build configuration list for PBXProject "Genshin Intact" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -327,15 +405,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		085EE2DF9CC0020A0614FD22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Genshin Intact-Genshin IntactUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A49E7687F4E0F465167F9CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Genshin Intact-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AD925A8257DB79AFDD0EF26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Genshin IntactTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABBB4082E26CD20C5CD45A05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FABC38D4565551222E411CA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Genshin Intact-Genshin IntactUITests/Pods-Genshin Intact-Genshin IntactUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Genshin Intact-Genshin IntactUITests/Pods-Genshin Intact-Genshin IntactUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Genshin Intact-Genshin IntactUITests/Pods-Genshin Intact-Genshin IntactUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		706198C42B067F7500762BAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7061990C2B068C6800762BAF /* EndpointRouter.swift in Sources */,
 				706198D02B067F7500762BAF /* HomeViewController.swift in Sources */,
+				706199102B06A1C900762BAF /* GIError.swift in Sources */,
 				706199052B0685E400762BAF /* Config.swift in Sources */,
 				706198CC2B067F7500762BAF /* AppDelegate.swift in Sources */,
 				706199072B0688AB00762BAF /* HTTPMethod.swift in Sources */,
+				7061990A2B06891D00762BAF /* NetworkService.swift in Sources */,
 				706198CE2B067F7500762BAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +689,7 @@
 		};
 		706198F32B067F7900762BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57B5FE3DD5034B1EE39A6420 /* Pods-Genshin Intact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -532,6 +717,7 @@
 		};
 		706198F42B067F7900762BAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -559,6 +745,7 @@
 		};
 		706198F62B067F7900762BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +766,7 @@
 		};
 		706198F72B067F7900762BAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 357B804FACA29D3269A7A5C7 /* Pods-Genshin IntactTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +787,7 @@
 		};
 		706198F92B067F7900762BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CFD4C36A72B26A647E3D9B /* Pods-Genshin Intact-Genshin IntactUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -617,6 +806,7 @@
 		};
 		706198FA2B067F7900762BAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FB1047ACEEF53874BC036B4 /* Pods-Genshin Intact-Genshin IntactUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
