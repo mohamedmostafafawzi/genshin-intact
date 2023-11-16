@@ -97,12 +97,12 @@
 		706198CA2B067F7500762BAF /* Genshin Intact */ = {
 			isa = PBXGroup;
 			children = (
-				706198CB2B067F7500762BAF /* AppDelegate.swift */,
-				706198CD2B067F7500762BAF /* SceneDelegate.swift */,
-				706198CF2B067F7500762BAF /* HomeViewController.swift */,
-				706198D42B067F7800762BAF /* Assets.xcassets */,
-				706198D62B067F7800762BAF /* LaunchScreen.storyboard */,
-				706198D92B067F7800762BAF /* Info.plist */,
+				706198FB2B0683D500762BAF /* Application */,
+				706198FC2B0683E200762BAF /* Domain */,
+				706198FD2B0683EE00762BAF /* Data */,
+				706198FE2B0683F700762BAF /* Presentation */,
+				706198FF2B06840500762BAF /* Infrastructure */,
+				706199002B06842A00762BAF /* Resources */,
 			);
 			path = "Genshin Intact";
 			sourceTree = "<group>";
@@ -122,6 +122,62 @@
 				706198EE2B067F7900762BAF /* Genshin_IntactUITestsLaunchTests.swift */,
 			);
 			path = "Genshin IntactUITests";
+			sourceTree = "<group>";
+		};
+		706198FB2B0683D500762BAF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				706198CB2B067F7500762BAF /* AppDelegate.swift */,
+				706198CD2B067F7500762BAF /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		706198FC2B0683E200762BAF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		706198FD2B0683EE00762BAF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		706198FE2B0683F700762BAF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				706199012B06846F00762BAF /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		706198FF2B06840500762BAF /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		706199002B06842A00762BAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				706198D42B067F7800762BAF /* Assets.xcassets */,
+				706198D62B067F7800762BAF /* LaunchScreen.storyboard */,
+				706198D92B067F7800762BAF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		706199012B06846F00762BAF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				706198CF2B067F7500762BAF /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
