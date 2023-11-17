@@ -13,13 +13,21 @@ public class AppCoordinator: Coordinator {
     private let window: UIWindow
     private let rootVC: UIViewController
 
+    // MARK: Child coordinators
+    private var launchCoordinator: LaunchCoordinator?
+    
+    // MARK: Factories
+    private let launchCoordinatorFactory: LaunchCoordinatorFactory
+    
     // MARK: - Initializer
     init(
         window: UIWindow,
-        rootVC: UIViewController
+        rootVC: UIViewController,
+        launchCoordinatorFactory: LaunchCoordinatorFactory
     ) {
         self.window = window
         self.rootVC = rootVC
+        self.launchCoordinatorFactory = launchCoordinatorFactory
     }
     
     // MARK: - Methods
@@ -28,6 +36,7 @@ public class AppCoordinator: Coordinator {
     ) {
         window.rootViewController = rootVC
         window.makeKeyAndVisible()
+        goToLaunchView()
         completionHandler?()
     }
     
@@ -37,4 +46,15 @@ public class AppCoordinator: Coordinator {
         completionHandler?()
     }
     
+    private func goToLaunchView() {
+        launchCoordinator = launchCoordinatorFactory.makeLaunchCoordinator()
+        launchCoordinator?.start()
+    }
+    
+}
+
+extension AppCoordinator: LaunchCoordinatorNavigationDelegate {
+    func goToHomeView() {
+        
+    }
 }

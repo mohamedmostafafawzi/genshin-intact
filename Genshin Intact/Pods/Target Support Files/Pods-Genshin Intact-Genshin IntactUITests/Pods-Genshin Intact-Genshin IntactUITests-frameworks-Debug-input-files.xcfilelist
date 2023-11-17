@@ -1,2 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Genshin Intact-Genshin IntactUITests/Pods-Genshin Intact-Genshin IntactUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

@@ -34,8 +34,7 @@ open class NiblessView: UIView {
         configureViewHierarchy()
         viewHierarchyDidConfigure()
         
-        // TODO :- Add loaderView if needed
-//        if let loaderView = loaderView { bringSubviewToFront(loaderView) }
+        if let loaderView = loaderView { bringSubviewToFront(loaderView) }
         
         hierarchyNotReady = false
     }

@@ -9,6 +9,10 @@ target 'Genshin Intact' do
   
   # Infrastructure
   pod 'PromiseKit', '~> 8'
+  
+  # Reactive frameworks
+  pod 'RxSwift', '6.6.0'
+  pod 'RxCocoa', '6.6.0'
 
   target 'Genshin IntactTests' do
     inherit! :search_paths

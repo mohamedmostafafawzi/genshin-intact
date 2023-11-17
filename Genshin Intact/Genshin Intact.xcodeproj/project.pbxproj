@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3B70AA9172A6DC963AEE2F38 /* Pods_Genshin_Intact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B01EA1E82C66A73BED6C48 /* Pods_Genshin_Intact.framework */; };
 		706198CC2B067F7500762BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706198CB2B067F7500762BAF /* AppDelegate.swift */; };
-		706198CE2B067F7500762BAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706198CD2B067F7500762BAF /* SceneDelegate.swift */; };
 		706198D02B067F7500762BAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706198CF2B067F7500762BAF /* HomeViewController.swift */; };
 		706198D52B067F7800762BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706198D42B067F7800762BAF /* Assets.xcassets */; };
 		706198D82B067F7800762BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706198D62B067F7800762BAF /* LaunchScreen.storyboard */; };
@@ -60,6 +59,17 @@
 		706199782B06E1B600762BAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199772B06E1B600762BAF /* Coordinator.swift */; };
 		7061997B2B06E28F00762BAF /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061997A2B06E28F00762BAF /* AppDependencyContainer.swift */; };
 		7061997E2B06E33600762BAF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061997D2B06E33600762BAF /* AppCoordinator.swift */; };
+		706199812B06E62900762BAF /* LaunchDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199802B06E62900762BAF /* LaunchDependencyContainer.swift */; };
+		706199842B06E68400762BAF /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199832B06E68400762BAF /* LaunchCoordinator.swift */; };
+		706199862B06E6D100762BAF /* LaunchCoordinatorNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199852B06E6D100762BAF /* LaunchCoordinatorNavigationDelegate.swift */; };
+		706199882B06E71100762BAF /* LaunchCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199872B06E71100762BAF /* LaunchCoordinatorFactory.swift */; };
+		7061998B2B06E94A00762BAF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061998A2B06E94A00762BAF /* LaunchViewController.swift */; };
+		7061998D2B06E98800762BAF /* LaunchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061998C2B06E98800762BAF /* LaunchRootView.swift */; };
+		7061998F2B06E9BF00762BAF /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061998E2B06E9BF00762BAF /* LaunchViewModel.swift */; };
+		706199912B06EA1500762BAF /* LaunchViewControllerNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199902B06EA1500762BAF /* LaunchViewControllerNavigationDelegate.swift */; };
+		706199932B06EA3600762BAF /* LaunchViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */; };
+		706199952B06EAF000762BAF /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199942B06EAF000762BAF /* UIView+Loading.swift */; };
+		706199972B06EB3100762BAF /* UIActivityIndicator+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */; };
 		B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */; };
 		B595E8A36F5A70330F8F08BA /* Pods_Genshin_IntactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */; };
 /* End PBXBuildFile section */
@@ -88,7 +98,6 @@
 		57B5FE3DD5034B1EE39A6420 /* Pods-Genshin Intact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.debug.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.debug.xcconfig"; sourceTree = "<group>"; };
 		706198C82B067F7500762BAF /* Genshin Intact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Genshin Intact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		706198CB2B067F7500762BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		706198CD2B067F7500762BAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		706198CF2B067F7500762BAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		706198D42B067F7800762BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706198D72B067F7800762BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -142,6 +151,17 @@
 		706199772B06E1B600762BAF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7061997A2B06E28F00762BAF /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		7061997D2B06E33600762BAF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		706199802B06E62900762BAF /* LaunchDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDependencyContainer.swift; sourceTree = "<group>"; };
+		706199832B06E68400762BAF /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
+		706199852B06E6D100762BAF /* LaunchCoordinatorNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinatorNavigationDelegate.swift; sourceTree = "<group>"; };
+		706199872B06E71100762BAF /* LaunchCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinatorFactory.swift; sourceTree = "<group>"; };
+		7061998A2B06E94A00762BAF /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		7061998C2B06E98800762BAF /* LaunchRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRootView.swift; sourceTree = "<group>"; };
+		7061998E2B06E9BF00762BAF /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		706199902B06EA1500762BAF /* LaunchViewControllerNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControllerNavigationDelegate.swift; sourceTree = "<group>"; };
+		706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControllerFactory.swift; sourceTree = "<group>"; };
+		706199942B06EAF000762BAF /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
+		706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Styling.swift"; sourceTree = "<group>"; };
 		8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.release.xcconfig"; sourceTree = "<group>"; };
 		84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin IntactTests.debug.xcconfig"; path = "Target Support Files/Pods-Genshin IntactTests/Pods-Genshin IntactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_IntactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,7 +252,7 @@
 		706198FB2B0683D500762BAF /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				7061996D2B06E0C500762BAF /* AppDelegates */,
+				7061996D2B06E0C500762BAF /* AppDelegate */,
 				7061996C2B06E0A800762BAF /* DependencyContainers */,
 				7061996E2B06E0EC00762BAF /* Navigation */,
 			);
@@ -260,6 +280,7 @@
 		706198FE2B0683F700762BAF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				706199892B06E83600762BAF /* Launch */,
 				706199012B06846F00762BAF /* Home */,
 				706199292B06D50200762BAF /* Utilities */,
 			);
@@ -482,6 +503,7 @@
 				7061994E2B06DB2A00762BAF /* UIColor+Hex.swift */,
 				706199502B06DB6800762BAF /* UICollectionViewCell+Dequeue.swift */,
 				706199522B06DB9600762BAF /* UITableViewCell+Dequeue.swift */,
+				706199942B06EAF000762BAF /* UIView+Loading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -505,6 +527,7 @@
 				7061995A2B06DCFA00762BAF /* UIImageView+Styling.swift */,
 				7061995C2B06DD4B00762BAF /* UIView+Styling.swift */,
 				7061995E2B06DD6800762BAF /* UISearchBar+Styling.swift */,
+				706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */,
 			);
 			path = "UIViews+Styling";
 			sourceTree = "<group>";
@@ -530,17 +553,17 @@
 			children = (
 				7061996F2B06E13700762BAF /* Common */,
 				706199792B06E27E00762BAF /* App */,
+				7061997F2B06E60C00762BAF /* Launch */,
 			);
 			path = DependencyContainers;
 			sourceTree = "<group>";
 		};
-		7061996D2B06E0C500762BAF /* AppDelegates */ = {
+		7061996D2B06E0C500762BAF /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				706198CB2B067F7500762BAF /* AppDelegate.swift */,
-				706198CD2B067F7500762BAF /* SceneDelegate.swift */,
 			);
-			path = AppDelegates;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		7061996E2B06E0EC00762BAF /* Navigation */ = {
@@ -548,6 +571,7 @@
 			children = (
 				706199752B06E19C00762BAF /* Common */,
 				7061997C2B06E32600762BAF /* App */,
+				706199822B06E66000762BAF /* Launch */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -599,6 +623,36 @@
 				7061997D2B06E33600762BAF /* AppCoordinator.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		7061997F2B06E60C00762BAF /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				706199802B06E62900762BAF /* LaunchDependencyContainer.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		706199822B06E66000762BAF /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				706199832B06E68400762BAF /* LaunchCoordinator.swift */,
+				706199852B06E6D100762BAF /* LaunchCoordinatorNavigationDelegate.swift */,
+				706199872B06E71100762BAF /* LaunchCoordinatorFactory.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		706199892B06E83600762BAF /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				7061998A2B06E94A00762BAF /* LaunchViewController.swift */,
+				7061998C2B06E98800762BAF /* LaunchRootView.swift */,
+				7061998E2B06E9BF00762BAF /* LaunchViewModel.swift */,
+				706199902B06EA1500762BAF /* LaunchViewControllerNavigationDelegate.swift */,
+				706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		8A2F44DFED59382193FD56ED /* Pods */ = {
@@ -862,21 +916,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706199882B06E71100762BAF /* LaunchCoordinatorFactory.swift in Sources */,
 				7061994D2B06D98800762BAF /* UIView+Configuration.swift in Sources */,
 				706199372B06D6E900762BAF /* NiblessViewController.swift in Sources */,
 				7061994A2B06D93000762BAF /* UIViewController+Containment.swift in Sources */,
 				7061991A2B06A9AD00762BAF /* GenshinContentType.swift in Sources */,
 				706199302B06D5F900762BAF /* TableViewDataSourceConfigurator.swift in Sources */,
 				706199212B06ACF800762BAF /* ContentRepository.swift in Sources */,
+				7061998D2B06E98800762BAF /* LaunchRootView.swift in Sources */,
 				7061990C2B068C6800762BAF /* EndpointRouter.swift in Sources */,
+				706199812B06E62900762BAF /* LaunchDependencyContainer.swift in Sources */,
 				706199612B06DD9000762BAF /* ColorManager.swift in Sources */,
 				706199632B06DE1F00762BAF /* Dimensions.swift in Sources */,
 				7061995F2B06DD6800762BAF /* UISearchBar+Styling.swift in Sources */,
 				706199572B06DC4F00762BAF /* UILabel+Styling.swift in Sources */,
+				706199912B06EA1500762BAF /* LaunchViewControllerNavigationDelegate.swift in Sources */,
 				706199482B06D8C800762BAF /* UIView+Layout.swift in Sources */,
 				7061997B2B06E28F00762BAF /* AppDependencyContainer.swift in Sources */,
+				706199862B06E6D100762BAF /* LaunchCoordinatorNavigationDelegate.swift in Sources */,
+				7061998F2B06E9BF00762BAF /* LaunchViewModel.swift in Sources */,
 				706198D02B067F7500762BAF /* HomeViewController.swift in Sources */,
 				7061994F2B06DB2A00762BAF /* UIColor+Hex.swift in Sources */,
+				706199842B06E68400762BAF /* LaunchCoordinator.swift in Sources */,
 				706199322B06D62100762BAF /* NavigationBarConfigurator.swift in Sources */,
 				7061997E2B06E33600762BAF /* AppCoordinator.swift in Sources */,
 				706199392B06D70E00762BAF /* NiblessView.swift in Sources */,
@@ -893,10 +954,13 @@
 				706198CC2B067F7500762BAF /* AppDelegate.swift in Sources */,
 				7061995D2B06DD4B00762BAF /* UIView+Styling.swift in Sources */,
 				7061993B2B06D73000762BAF /* NiblessTableViewHeaderFooterView.swift in Sources */,
+				706199952B06EAF000762BAF /* UIView+Loading.swift in Sources */,
 				7061995B2B06DCFA00762BAF /* UIImageView+Styling.swift in Sources */,
 				706199682B06DFAA00762BAF /* Date+Extensions.swift in Sources */,
 				7061993D2B06D74E00762BAF /* NiblessTableViewCell.swift in Sources */,
 				706199072B0688AB00762BAF /* HTTPMethod.swift in Sources */,
+				706199932B06EA3600762BAF /* LaunchViewControllerFactory.swift in Sources */,
+				7061998B2B06E94A00762BAF /* LaunchViewController.swift in Sources */,
 				706199592B06DC9900762BAF /* UIButton+Styling.swift in Sources */,
 				706199652B06DE8400762BAF /* FontManager.swift in Sources */,
 				706199412B06D80D00762BAF /* NiblessCollectionReusableView.swift in Sources */,
@@ -905,10 +969,10 @@
 				7061992E2B06D5D800762BAF /* CollectionViewDataSourceConfigurator.swift in Sources */,
 				706199742B06E17B00762BAF /* DependencyContainer.swift in Sources */,
 				706199432B06D86200762BAF /* ConfigurableCell.swift in Sources */,
+				706199972B06EB3100762BAF /* UIActivityIndicator+Styling.swift in Sources */,
 				7061990A2B06891D00762BAF /* NetworkService.swift in Sources */,
 				706199352B06D67600762BAF /* NiblessCollectionViewCell.swift in Sources */,
 				706199232B06AD7E00762BAF /* MainContentRepository.swift in Sources */,
-				706198CE2B067F7500762BAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

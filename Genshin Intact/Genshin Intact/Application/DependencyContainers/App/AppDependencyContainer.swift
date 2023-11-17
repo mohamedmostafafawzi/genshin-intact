@@ -32,10 +32,21 @@ public class AppDependencyContainer {
     public func makeAppCoordinator() -> AppCoordinator {
         let coordinator = AppCoordinator(
             window: window,
-            rootVC: rootVC
+            rootVC: rootVC,
+            launchCoordinatorFactory: self
         )
         self.sharedAppCoordinator = coordinator
         return coordinator
     }
 }
 
+// MARK: - Factories
+extension AppDependencyContainer: LaunchCoordinatorFactory {
+    func makeLaunchCoordinator() -> LaunchCoordinator {
+        let launchDependencyContainer = LaunchDependencyContainer(
+            presenter: rootVC,
+            launchCoordinatorNavigationDelegate: sharedAppCoordinator
+        )
+        return launchDependencyContainer.makeAndStoreCoordinator()
+    }
+}
