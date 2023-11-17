@@ -16,6 +16,7 @@ public extension UIColor {
     static let electro = ColorPalette.electro
     static let anemo = ColorPalette.anemo
     static let dendro = ColorPalette.dendro
+    static let cryo = ColorPalette.cryo
     
     // MARK: - Text Semantic Colors
     static let headerText = evaluateColor(light: ColorPalette.black,
@@ -83,11 +84,12 @@ public extension UIColor {
 private struct ColorPalette {
     // Elements
     static let pyro = UIColor(hex: "EC4923")
-    static let hydro = UIColor(hex: "EC4923")
+    static let hydro = UIColor(hex: "00BFFF")
     static let geo = UIColor(hex: "EC4923")
-    static let electro = UIColor(hex: "EC4923")
-    static let anemo = UIColor(hex: "EC4923")
-    static let dendro = UIColor(hex: "EC4923")
+    static let electro = UIColor(hex: "945dc4")
+    static let anemo = UIColor(hex: "359697")
+    static let dendro = UIColor(hex: "608a00")
+    static let cryo = UIColor(hex: "4682B4")
     
     // Shades of black
     static let black = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
