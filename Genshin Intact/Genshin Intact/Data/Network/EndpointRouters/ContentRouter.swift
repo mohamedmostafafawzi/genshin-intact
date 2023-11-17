@@ -8,19 +8,19 @@
 import Foundation
 
 enum ContentRouter: EndpointRouter {
-    case getContent(type: GenshinContentType)
+    case getCharacters
     
     var method: HTTPMethod {
         switch self {
-        case .getContent:
+        case .getCharacters:
             return .get
         }
     }
     
     var path: String {
         switch self {
-        case .getContent(let type):
-            return type.rawValue
+        case .getCharacters:
+            return "characters/all"
         }
     }
     

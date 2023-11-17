@@ -19,10 +19,10 @@ public final class MainContentRepository: ContentRepository {
     }
     
     // MARK: - Methods
-    public func getContent(type: GenshinContentType) -> Promise<[String]> {
-        func getContentResponse() -> Promise<[String]> {
-            return networkService.fetchRequest(forRoute: ContentRouter.getContent(type: type))
+    public func getCharacters() -> Promise<Characters> {
+        func getCharactersResponse() -> Promise<[CharacterDTO]> {
+            return networkService.fetchRequest(forRoute: ContentRouter.getCharacters)
         }
-        return getContentResponse()
+        return getCharactersResponse().map { $0.map { $0.toDomain() } }
     }
 }

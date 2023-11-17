@@ -9,5 +9,5 @@ import Foundation
 import PromiseKit
 
 protocol ContentRepository {
-    func getContent(type: GenshinContentType) -> Promise<[String]>
+    func getCharacters() -> Promise<Characters>
 }

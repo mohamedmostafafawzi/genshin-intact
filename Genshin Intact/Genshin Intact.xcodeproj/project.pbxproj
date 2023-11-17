@@ -22,7 +22,6 @@
 		706199102B06A1C900762BAF /* GIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061990F2B06A1C900762BAF /* GIError.swift */; };
 		706199132B06A3DE00762BAF /* MainNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199122B06A3DE00762BAF /* MainNetworkService.swift */; };
 		706199182B06A71300762BAF /* ContentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199172B06A71300762BAF /* ContentRouter.swift */; };
-		7061991A2B06A9AD00762BAF /* GenshinContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199192B06A9AD00762BAF /* GenshinContentType.swift */; };
 		706199212B06ACF800762BAF /* ContentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199202B06ACF800762BAF /* ContentRepository.swift */; };
 		706199232B06AD7E00762BAF /* MainContentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199222B06AD7E00762BAF /* MainContentRepository.swift */; };
 		706199262B06AED000762BAF /* ContentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199252B06AED000762BAF /* ContentUseCase.swift */; };
@@ -70,6 +69,8 @@
 		706199932B06EA3600762BAF /* LaunchViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */; };
 		706199952B06EAF000762BAF /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199942B06EAF000762BAF /* UIView+Loading.swift */; };
 		706199972B06EB3100762BAF /* UIActivityIndicator+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */; };
+		70E844212B07FA6A001525FD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E844202B07FA6A001525FD /* Character.swift */; };
+		70E844232B07FB4E001525FD /* CharacterDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */; };
 		B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */; };
 		B595E8A36F5A70330F8F08BA /* Pods_Genshin_IntactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */; };
 /* End PBXBuildFile section */
@@ -114,7 +115,6 @@
 		7061990F2B06A1C900762BAF /* GIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIError.swift; sourceTree = "<group>"; };
 		706199122B06A3DE00762BAF /* MainNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkService.swift; sourceTree = "<group>"; };
 		706199172B06A71300762BAF /* ContentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRouter.swift; sourceTree = "<group>"; };
-		706199192B06A9AD00762BAF /* GenshinContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenshinContentType.swift; sourceTree = "<group>"; };
 		706199202B06ACF800762BAF /* ContentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRepository.swift; sourceTree = "<group>"; };
 		706199222B06AD7E00762BAF /* MainContentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentRepository.swift; sourceTree = "<group>"; };
 		706199252B06AED000762BAF /* ContentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUseCase.swift; sourceTree = "<group>"; };
@@ -162,6 +162,8 @@
 		706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControllerFactory.swift; sourceTree = "<group>"; };
 		706199942B06EAF000762BAF /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
 		706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Styling.swift"; sourceTree = "<group>"; };
+		70E844202B07FA6A001525FD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterDTO+Mapping.swift"; sourceTree = "<group>"; };
 		8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.release.xcconfig"; sourceTree = "<group>"; };
 		84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin IntactTests.debug.xcconfig"; path = "Target Support Files/Pods-Genshin IntactTests/Pods-Genshin IntactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_IntactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -344,8 +346,8 @@
 		7061990D2B068CBC00762BAF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				7061991B2B06AB7500762BAF /* GenshinContentType */,
 				7061990E2B068CDC00762BAF /* Others */,
+				70E844202B07FA6A001525FD /* Character.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -387,16 +389,9 @@
 		706199162B06A6DE00762BAF /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
+				70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */,
 			);
 			path = DataMapping;
-			sourceTree = "<group>";
-		};
-		7061991B2B06AB7500762BAF /* GenshinContentType */ = {
-			isa = PBXGroup;
-			children = (
-				706199192B06A9AD00762BAF /* GenshinContentType.swift */,
-			);
-			path = GenshinContentType;
 			sourceTree = "<group>";
 		};
 		7061991D2B06AC8200762BAF /* Repositories */ = {
@@ -920,7 +915,6 @@
 				7061994D2B06D98800762BAF /* UIView+Configuration.swift in Sources */,
 				706199372B06D6E900762BAF /* NiblessViewController.swift in Sources */,
 				7061994A2B06D93000762BAF /* UIViewController+Containment.swift in Sources */,
-				7061991A2B06A9AD00762BAF /* GenshinContentType.swift in Sources */,
 				706199302B06D5F900762BAF /* TableViewDataSourceConfigurator.swift in Sources */,
 				706199212B06ACF800762BAF /* ContentRepository.swift in Sources */,
 				7061998D2B06E98800762BAF /* LaunchRootView.swift in Sources */,
@@ -935,6 +929,7 @@
 				7061997B2B06E28F00762BAF /* AppDependencyContainer.swift in Sources */,
 				706199862B06E6D100762BAF /* LaunchCoordinatorNavigationDelegate.swift in Sources */,
 				7061998F2B06E9BF00762BAF /* LaunchViewModel.swift in Sources */,
+				70E844212B07FA6A001525FD /* Character.swift in Sources */,
 				706198D02B067F7500762BAF /* HomeViewController.swift in Sources */,
 				7061994F2B06DB2A00762BAF /* UIColor+Hex.swift in Sources */,
 				706199842B06E68400762BAF /* LaunchCoordinator.swift in Sources */,
@@ -956,6 +951,7 @@
 				7061993B2B06D73000762BAF /* NiblessTableViewHeaderFooterView.swift in Sources */,
 				706199952B06EAF000762BAF /* UIView+Loading.swift in Sources */,
 				7061995B2B06DCFA00762BAF /* UIImageView+Styling.swift in Sources */,
+				70E844232B07FB4E001525FD /* CharacterDTO+Mapping.swift in Sources */,
 				706199682B06DFAA00762BAF /* Date+Extensions.swift in Sources */,
 				7061993D2B06D74E00762BAF /* NiblessTableViewCell.swift in Sources */,
 				706199072B0688AB00762BAF /* HTTPMethod.swift in Sources */,

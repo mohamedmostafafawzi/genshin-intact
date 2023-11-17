@@ -9,7 +9,7 @@ import Foundation
 import PromiseKit
 
 public protocol ContentUseCase {
-    func getContent(type: GenshinContentType) -> Promise<[String]> 
+    func getCharacters() -> Promise<Characters>
 }
 
 final class MainContentUseCase: ContentUseCase {
@@ -25,8 +25,8 @@ final class MainContentUseCase: ContentUseCase {
     }
     
     // MARK: - Methods
-    func getContent(type: GenshinContentType) -> Promise<[String]> {
-        return contentRepository.getContent(type: type)
+    func getCharacters() -> Promise<Characters>  {
+        return contentRepository.getCharacters()
     }
 
 }
