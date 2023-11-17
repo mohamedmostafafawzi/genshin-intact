@@ -55,6 +55,11 @@
 		706199652B06DE8400762BAF /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199642B06DE8400762BAF /* FontManager.swift */; };
 		706199682B06DFAA00762BAF /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199672B06DFAA00762BAF /* Date+Extensions.swift */; };
 		7061996B2B06E00C00762BAF /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061996A2B06E00C00762BAF /* ViewModelType.swift */; };
+		706199722B06E15F00762BAF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199712B06E15F00762BAF /* RootViewController.swift */; };
+		706199742B06E17B00762BAF /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199732B06E17B00762BAF /* DependencyContainer.swift */; };
+		706199782B06E1B600762BAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199772B06E1B600762BAF /* Coordinator.swift */; };
+		7061997B2B06E28F00762BAF /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061997A2B06E28F00762BAF /* AppDependencyContainer.swift */; };
+		7061997E2B06E33600762BAF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061997D2B06E33600762BAF /* AppCoordinator.swift */; };
 		B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */; };
 		B595E8A36F5A70330F8F08BA /* Pods_Genshin_IntactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +137,11 @@
 		706199642B06DE8400762BAF /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		706199672B06DFAA00762BAF /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		7061996A2B06E00C00762BAF /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		706199712B06E15F00762BAF /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		706199732B06E17B00762BAF /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		706199772B06E1B600762BAF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7061997A2B06E28F00762BAF /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		7061997D2B06E33600762BAF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.release.xcconfig"; sourceTree = "<group>"; };
 		84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin IntactTests.debug.xcconfig"; path = "Target Support Files/Pods-Genshin IntactTests/Pods-Genshin IntactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_IntactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,8 +232,9 @@
 		706198FB2B0683D500762BAF /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				706198CB2B067F7500762BAF /* AppDelegate.swift */,
-				706198CD2B067F7500762BAF /* SceneDelegate.swift */,
+				7061996D2B06E0C500762BAF /* AppDelegates */,
+				7061996C2B06E0A800762BAF /* DependencyContainers */,
+				7061996E2B06E0EC00762BAF /* Navigation */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -249,8 +260,8 @@
 		706198FE2B0683F700762BAF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				706199292B06D50200762BAF /* Utilities */,
 				706199012B06846F00762BAF /* Home */,
+				706199292B06D50200762BAF /* Utilities */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -512,6 +523,82 @@
 				7061996A2B06E00C00762BAF /* ViewModelType.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7061996C2B06E0A800762BAF /* DependencyContainers */ = {
+			isa = PBXGroup;
+			children = (
+				7061996F2B06E13700762BAF /* Common */,
+				706199792B06E27E00762BAF /* App */,
+			);
+			path = DependencyContainers;
+			sourceTree = "<group>";
+		};
+		7061996D2B06E0C500762BAF /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				706198CB2B067F7500762BAF /* AppDelegate.swift */,
+				706198CD2B067F7500762BAF /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		7061996E2B06E0EC00762BAF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				706199752B06E19C00762BAF /* Common */,
+				7061997C2B06E32600762BAF /* App */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		7061996F2B06E13700762BAF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				706199712B06E15F00762BAF /* RootViewController.swift */,
+				706199702B06E14800762BAF /* Protocols */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		706199702B06E14800762BAF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				706199732B06E17B00762BAF /* DependencyContainer.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		706199752B06E19C00762BAF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				706199762B06E1A200762BAF /* Protocols */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		706199762B06E1A200762BAF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				706199772B06E1B600762BAF /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		706199792B06E27E00762BAF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7061997A2B06E28F00762BAF /* AppDependencyContainer.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7061997C2B06E32600762BAF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7061997D2B06E33600762BAF /* AppCoordinator.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		8A2F44DFED59382193FD56ED /* Pods */ = {
@@ -787,16 +874,20 @@
 				7061995F2B06DD6800762BAF /* UISearchBar+Styling.swift in Sources */,
 				706199572B06DC4F00762BAF /* UILabel+Styling.swift in Sources */,
 				706199482B06D8C800762BAF /* UIView+Layout.swift in Sources */,
+				7061997B2B06E28F00762BAF /* AppDependencyContainer.swift in Sources */,
 				706198D02B067F7500762BAF /* HomeViewController.swift in Sources */,
 				7061994F2B06DB2A00762BAF /* UIColor+Hex.swift in Sources */,
 				706199322B06D62100762BAF /* NavigationBarConfigurator.swift in Sources */,
+				7061997E2B06E33600762BAF /* AppCoordinator.swift in Sources */,
 				706199392B06D70E00762BAF /* NiblessView.swift in Sources */,
 				706199462B06D8A300762BAF /* AnchoredConstraints.swift in Sources */,
+				706199782B06E1B600762BAF /* Coordinator.swift in Sources */,
 				706199102B06A1C900762BAF /* GIError.swift in Sources */,
 				706199262B06AED000762BAF /* ContentUseCase.swift in Sources */,
 				706199512B06DB6800762BAF /* UICollectionViewCell+Dequeue.swift in Sources */,
 				7061996B2B06E00C00762BAF /* ViewModelType.swift in Sources */,
 				706199132B06A3DE00762BAF /* MainNetworkService.swift in Sources */,
+				706199722B06E15F00762BAF /* RootViewController.swift in Sources */,
 				706199052B0685E400762BAF /* Config.swift in Sources */,
 				706199532B06DB9600762BAF /* UITableViewCell+Dequeue.swift in Sources */,
 				706198CC2B067F7500762BAF /* AppDelegate.swift in Sources */,
@@ -812,6 +903,7 @@
 				7061993F2B06D78100762BAF /* NiblessNavigationController.swift in Sources */,
 				706199182B06A71300762BAF /* ContentRouter.swift in Sources */,
 				7061992E2B06D5D800762BAF /* CollectionViewDataSourceConfigurator.swift in Sources */,
+				706199742B06E17B00762BAF /* DependencyContainer.swift in Sources */,
 				706199432B06D86200762BAF /* ConfigurableCell.swift in Sources */,
 				7061990A2B06891D00762BAF /* NetworkService.swift in Sources */,
 				706199352B06D67600762BAF /* NiblessCollectionViewCell.swift in Sources */,
