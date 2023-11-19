@@ -77,6 +77,8 @@ public extension UIColor {
                                                  dark: ColorPalette.lightGrey)
     static let launchIcon = evaluateColor(light: ColorPalette.darkGrey,
                                                  dark: ColorPalette.lightGrey)
+    static let homeTopIcon = evaluateColor(light: ColorPalette.darkGrey,
+                                                 dark: ColorPalette.lightGrey)
     static let lightContentActivityIndicator = ColorPalette.white
 }
 

@@ -34,5 +34,10 @@ public class LaunchViewController: NiblessViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) { [weak self] in
+            guard let self else { return }
+            navigationDelegate?.goToHomeView()
+        }
     }
 }

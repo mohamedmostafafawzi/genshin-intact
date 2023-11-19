@@ -15,19 +15,23 @@ public class AppCoordinator: Coordinator {
 
     // MARK: Child coordinators
     private var launchCoordinator: LaunchCoordinator?
+    private var homeCoordinator: HomeCoordinator?
     
     // MARK: Factories
     private let launchCoordinatorFactory: LaunchCoordinatorFactory
+    private let homeCoordinatorFactory: HomeCoordinatorFactory
     
     // MARK: - Initializer
     init(
         window: UIWindow,
         rootVC: UIViewController,
-        launchCoordinatorFactory: LaunchCoordinatorFactory
+        launchCoordinatorFactory: LaunchCoordinatorFactory,
+        homeCoordinatorFactory: HomeCoordinatorFactory
     ) {
         self.window = window
         self.rootVC = rootVC
         self.launchCoordinatorFactory = launchCoordinatorFactory
+        self.homeCoordinatorFactory =  homeCoordinatorFactory
     }
     
     // MARK: - Methods
@@ -55,6 +59,11 @@ public class AppCoordinator: Coordinator {
 
 extension AppCoordinator: LaunchCoordinatorNavigationDelegate {
     func goToHomeView() {
-        
+        homeCoordinator = homeCoordinatorFactory.makeHomeCoordinator()
+        homeCoordinator?.start()
     }
+}
+
+extension AppCoordinator: HomeCoordinatorNavigationDelegate {
+
 }

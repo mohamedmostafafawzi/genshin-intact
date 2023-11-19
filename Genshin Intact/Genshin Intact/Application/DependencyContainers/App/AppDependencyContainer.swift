@@ -33,7 +33,8 @@ public class AppDependencyContainer {
         let coordinator = AppCoordinator(
             window: window,
             rootVC: rootVC,
-            launchCoordinatorFactory: self
+            launchCoordinatorFactory: self, 
+            homeCoordinatorFactory: self
         )
         self.sharedAppCoordinator = coordinator
         return coordinator
@@ -48,5 +49,15 @@ extension AppDependencyContainer: LaunchCoordinatorFactory {
             launchCoordinatorNavigationDelegate: sharedAppCoordinator
         )
         return launchDependencyContainer.makeAndStoreCoordinator()
+    }
+}
+
+extension AppDependencyContainer: HomeCoordinatorFactory {
+    func makeHomeCoordinator() -> HomeCoordinator {
+        let homeDependencyContainer = HomeDependencyContainer(
+            presenter: rootVC,
+            homeCoordinatorNavigationDelegate: sharedAppCoordinator
+        )
+        return homeDependencyContainer.makeAndStoreCoordinator()
     }
 }

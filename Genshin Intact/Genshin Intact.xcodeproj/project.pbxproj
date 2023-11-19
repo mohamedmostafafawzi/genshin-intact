@@ -69,6 +69,14 @@
 		706199932B06EA3600762BAF /* LaunchViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */; };
 		706199952B06EAF000762BAF /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199942B06EAF000762BAF /* UIView+Loading.swift */; };
 		706199972B06EB3100762BAF /* UIActivityIndicator+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */; };
+		70E592392B0A695900DEFC13 /* HomeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E592382B0A695900DEFC13 /* HomeDependencyContainer.swift */; };
+		70E5923C2B0A6B4800DEFC13 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5923B2B0A6B4800DEFC13 /* HomeCoordinator.swift */; };
+		70E5923E2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5923D2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift */; };
+		70E592412B0A6B7B00DEFC13 /* HomeCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E592402B0A6B7B00DEFC13 /* HomeCoordinatorFactory.swift */; };
+		70E592432B0A6C8D00DEFC13 /* HomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E592422B0A6C8D00DEFC13 /* HomeRootView.swift */; };
+		70E592452B0A6C9D00DEFC13 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E592442B0A6C9D00DEFC13 /* HomeViewModel.swift */; };
+		70E592472B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E592462B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift */; };
+		70E592492B0A6CC600DEFC13 /* HomeViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E592482B0A6CC600DEFC13 /* HomeViewControllerFactory.swift */; };
 		70E844212B07FA6A001525FD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E844202B07FA6A001525FD /* Character.swift */; };
 		70E844232B07FB4E001525FD /* CharacterDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */; };
 		B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */; };
@@ -162,6 +170,14 @@
 		706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControllerFactory.swift; sourceTree = "<group>"; };
 		706199942B06EAF000762BAF /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
 		706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Styling.swift"; sourceTree = "<group>"; };
+		70E592382B0A695900DEFC13 /* HomeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependencyContainer.swift; sourceTree = "<group>"; };
+		70E5923B2B0A6B4800DEFC13 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		70E5923D2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorNavigationDelegate.swift; sourceTree = "<group>"; };
+		70E592402B0A6B7B00DEFC13 /* HomeCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorFactory.swift; sourceTree = "<group>"; };
+		70E592422B0A6C8D00DEFC13 /* HomeRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRootView.swift; sourceTree = "<group>"; };
+		70E592442B0A6C9D00DEFC13 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		70E592462B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerNavigationDelegate.swift; sourceTree = "<group>"; };
+		70E592482B0A6CC600DEFC13 /* HomeViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerFactory.swift; sourceTree = "<group>"; };
 		70E844202B07FA6A001525FD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterDTO+Mapping.swift"; sourceTree = "<group>"; };
 		8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.release.xcconfig"; sourceTree = "<group>"; };
@@ -311,6 +327,10 @@
 			isa = PBXGroup;
 			children = (
 				706198CF2B067F7500762BAF /* HomeViewController.swift */,
+				70E592422B0A6C8D00DEFC13 /* HomeRootView.swift */,
+				70E592442B0A6C9D00DEFC13 /* HomeViewModel.swift */,
+				70E592462B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift */,
+				70E592482B0A6CC600DEFC13 /* HomeViewControllerFactory.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -346,8 +366,8 @@
 		7061990D2B068CBC00762BAF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				7061990E2B068CDC00762BAF /* Others */,
 				70E844202B07FA6A001525FD /* Character.swift */,
+				7061990E2B068CDC00762BAF /* Others */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -549,6 +569,7 @@
 				7061996F2B06E13700762BAF /* Common */,
 				706199792B06E27E00762BAF /* App */,
 				7061997F2B06E60C00762BAF /* Launch */,
+				70E592372B0A692900DEFC13 /* Home */,
 			);
 			path = DependencyContainers;
 			sourceTree = "<group>";
@@ -567,6 +588,7 @@
 				706199752B06E19C00762BAF /* Common */,
 				7061997C2B06E32600762BAF /* App */,
 				706199822B06E66000762BAF /* Launch */,
+				70E5923A2B0A6A3B00DEFC13 /* Home */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -648,6 +670,24 @@
 				706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		70E592372B0A692900DEFC13 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				70E592382B0A695900DEFC13 /* HomeDependencyContainer.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		70E5923A2B0A6A3B00DEFC13 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				70E5923B2B0A6B4800DEFC13 /* HomeCoordinator.swift */,
+				70E5923D2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift */,
+				70E592402B0A6B7B00DEFC13 /* HomeCoordinatorFactory.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8A2F44DFED59382193FD56ED /* Pods */ = {
@@ -913,6 +953,9 @@
 			files = (
 				706199882B06E71100762BAF /* LaunchCoordinatorFactory.swift in Sources */,
 				7061994D2B06D98800762BAF /* UIView+Configuration.swift in Sources */,
+				70E592492B0A6CC600DEFC13 /* HomeViewControllerFactory.swift in Sources */,
+				70E592432B0A6C8D00DEFC13 /* HomeRootView.swift in Sources */,
+				70E592452B0A6C9D00DEFC13 /* HomeViewModel.swift in Sources */,
 				706199372B06D6E900762BAF /* NiblessViewController.swift in Sources */,
 				7061994A2B06D93000762BAF /* UIViewController+Containment.swift in Sources */,
 				706199302B06D5F900762BAF /* TableViewDataSourceConfigurator.swift in Sources */,
@@ -928,6 +971,7 @@
 				706199482B06D8C800762BAF /* UIView+Layout.swift in Sources */,
 				7061997B2B06E28F00762BAF /* AppDependencyContainer.swift in Sources */,
 				706199862B06E6D100762BAF /* LaunchCoordinatorNavigationDelegate.swift in Sources */,
+				70E5923C2B0A6B4800DEFC13 /* HomeCoordinator.swift in Sources */,
 				7061998F2B06E9BF00762BAF /* LaunchViewModel.swift in Sources */,
 				70E844212B07FA6A001525FD /* Character.swift in Sources */,
 				706198D02B067F7500762BAF /* HomeViewController.swift in Sources */,
@@ -936,19 +980,23 @@
 				706199322B06D62100762BAF /* NavigationBarConfigurator.swift in Sources */,
 				7061997E2B06E33600762BAF /* AppCoordinator.swift in Sources */,
 				706199392B06D70E00762BAF /* NiblessView.swift in Sources */,
+				70E592412B0A6B7B00DEFC13 /* HomeCoordinatorFactory.swift in Sources */,
 				706199462B06D8A300762BAF /* AnchoredConstraints.swift in Sources */,
 				706199782B06E1B600762BAF /* Coordinator.swift in Sources */,
 				706199102B06A1C900762BAF /* GIError.swift in Sources */,
 				706199262B06AED000762BAF /* ContentUseCase.swift in Sources */,
 				706199512B06DB6800762BAF /* UICollectionViewCell+Dequeue.swift in Sources */,
+				70E592472B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift in Sources */,
 				7061996B2B06E00C00762BAF /* ViewModelType.swift in Sources */,
 				706199132B06A3DE00762BAF /* MainNetworkService.swift in Sources */,
+				70E592392B0A695900DEFC13 /* HomeDependencyContainer.swift in Sources */,
 				706199722B06E15F00762BAF /* RootViewController.swift in Sources */,
 				706199052B0685E400762BAF /* Config.swift in Sources */,
 				706199532B06DB9600762BAF /* UITableViewCell+Dequeue.swift in Sources */,
 				706198CC2B067F7500762BAF /* AppDelegate.swift in Sources */,
 				7061995D2B06DD4B00762BAF /* UIView+Styling.swift in Sources */,
 				7061993B2B06D73000762BAF /* NiblessTableViewHeaderFooterView.swift in Sources */,
+				70E5923E2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift in Sources */,
 				706199952B06EAF000762BAF /* UIView+Loading.swift in Sources */,
 				7061995B2B06DCFA00762BAF /* UIImageView+Styling.swift in Sources */,
 				70E844232B07FB4E001525FD /* CharacterDTO+Mapping.swift in Sources */,
