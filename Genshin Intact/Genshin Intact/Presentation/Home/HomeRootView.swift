@@ -14,8 +14,31 @@ class HomeRootView: NiblessView {
                                                     image: UIImage(named: "app-logo"),
                                                     contentMode: .scaleAspectFit)
     
+    private lazy var collectionView: UICollectionView = {
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.scrollDirection = .vertical
+        let collectionView = UICollectionView(
+            frame: .zero,
+            collectionViewLayout: collectionViewLayout
+        )
+        collectionView.backgroundColor = .clear
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        return collectionView
+    }()
+    
+    // MARK: - Initializer
+    init(
+        collectionViewDataSourceConfigurator:
+            CollectionViewDataSourceConfigurator
+    ) {
+        super.init(frame: .zero)
+        collectionViewDataSourceConfigurator(collectionView)
+    }
+    
     // MARK: - Methods
     override func viewHierarchyDidConfigure() {
+        collectionView.registerCellFromClass(CharactersCollectionViewCell.self)
         backgroundColor = .background
     }
 }
@@ -28,6 +51,13 @@ extension HomeRootView {
             $0.constrainHeight($0.widthAnchor)
             $0.constrainWidth(150)
             $0.centerXToSuperview()
+        })
+        
+        add(collectionView, then: {
+            $0.anchor(.leading(safeAreaLayoutGuide.leadingAnchor),
+                      .top(logoImageView.bottomAnchor, constant: 16),
+                      .trailing(safeAreaLayoutGuide.trailingAnchor),
+                      .bottom(safeAreaLayoutGuide.bottomAnchor))
         })
         
     }

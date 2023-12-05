@@ -13,14 +13,17 @@ class HomeDependencyContainer: DependencyContainer {
     private weak var coordinator: HomeCoordinator!
     private weak var homeCoordinatorNavigationDelegate: HomeCoordinatorNavigationDelegate!
     private let presenter: UIViewController
+    private let sharedContentRepository: ContentRepository
     
     // MARK: - Initializer
     init(
         presenter: UIViewController,
-        homeCoordinatorNavigationDelegate: HomeCoordinatorNavigationDelegate
+        homeCoordinatorNavigationDelegate: HomeCoordinatorNavigationDelegate,
+        contentRepository: ContentRepository
     ) {
         self.presenter = presenter
         self.homeCoordinatorNavigationDelegate = homeCoordinatorNavigationDelegate
+        self.sharedContentRepository = contentRepository
     }
     
     // MARK: - Methods
@@ -45,6 +48,9 @@ extension HomeDependencyContainer: HomeViewControllerFactory {
     }
     
     private func makeHomeViewModel() -> HomeViewModel {
-        return HomeViewModel()
+        return HomeViewModel(
+            navigationDelegate: coordinator,
+            contentUseCase: MainContentUseCase(contentRepository: sharedContentRepository)
+        )
     }
 }

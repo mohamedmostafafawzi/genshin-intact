@@ -56,7 +56,8 @@ extension AppDependencyContainer: HomeCoordinatorFactory {
     func makeHomeCoordinator() -> HomeCoordinator {
         let homeDependencyContainer = HomeDependencyContainer(
             presenter: rootVC,
-            homeCoordinatorNavigationDelegate: sharedAppCoordinator
+            homeCoordinatorNavigationDelegate: sharedAppCoordinator,
+            contentRepository: MainContentRepository(networkService: sharedNetworkService)
         )
         return homeDependencyContainer.makeAndStoreCoordinator()
     }

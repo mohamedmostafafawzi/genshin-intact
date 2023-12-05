@@ -28,8 +28,8 @@ struct CharacterDTO: Codable {
 
     enum CodingKeys: String, CodingKey {
         case name, title, vision, weapon, nation, affiliation, rarity, constellation, birthday, description, skillTalents, passiveTalents, constellations
-        case visionKey
-        case weaponType
+        case visionKey = "vision_key"
+        case weaponType = "weapon_type"
         case gender, specialDish, outfits
     }
 }
@@ -114,6 +114,7 @@ enum NationDTO: String, Codable {
     case outlander = "Outlander"
     case snezhnaya = "Snezhnaya"
     case sumeru = "Sumeru"
+    case fontaine = "Fontaine"
     case unknown = "Unknown"
 }
 
@@ -140,9 +141,9 @@ extension CharacterRarityDTO {
 
 // MARK: - Outfit
 struct OutfitDTO: Codable {
-    let type, name, description: String
-    let rarity, price: Int
-    let image: String
+    let type, name, description: String?
+    let rarity, price: Int?
+    let image: String?
 }
 
 extension OutfitDTO {

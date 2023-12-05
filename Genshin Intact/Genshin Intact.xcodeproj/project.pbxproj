@@ -69,6 +69,21 @@
 		706199932B06EA3600762BAF /* LaunchViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */; };
 		706199952B06EAF000762BAF /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199942B06EAF000762BAF /* UIView+Loading.swift */; };
 		706199972B06EB3100762BAF /* UIActivityIndicator+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */; };
+		70D557D42B1F73F600DFA6D6 /* CharactersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D557D32B1F73F600DFA6D6 /* CharactersCollectionViewCell.swift */; };
+		70D557D62B1F741600DFA6D6 /* CharactersCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D557D52B1F741600DFA6D6 /* CharactersCollectionViewCellViewModel.swift */; };
+		70D557D82B1F78CC00DFA6D6 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D557D72B1F78CC00DFA6D6 /* ImageAsset.swift */; };
+		70D557E62B1F8B6900DFA6D6 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557DD2B1F8B6100DFA6D6 /* SourceSansPro-Black.ttf */; };
+		70D557E72B1F8B6D00DFA6D6 /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557DC2B1F8B6100DFA6D6 /* SourceSansPro-Light.ttf */; };
+		70D557E82B1F8B6D00DFA6D6 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557E22B1F8B6200DFA6D6 /* SourceSansPro-Bold.ttf */; };
+		70D557E92B1F8B6D00DFA6D6 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557DE2B1F8B6100DFA6D6 /* SourceSansPro-Regular.ttf */; };
+		70D557EA2B1F8B6D00DFA6D6 /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557DB2B1F8B6100DFA6D6 /* SourceSansPro-BlackItalic.ttf */; };
+		70D557EB2B1F8B6D00DFA6D6 /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557E02B1F8B6100DFA6D6 /* SourceSansPro-SemiBoldItalic.ttf */; };
+		70D557EC2B1F8B6D00DFA6D6 /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557DA2B1F8B6100DFA6D6 /* SourceSansPro-Italic.ttf */; };
+		70D557ED2B1F8B6D00DFA6D6 /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557E32B1F8B6200DFA6D6 /* SourceSansPro-LightItalic.ttf */; };
+		70D557EE2B1F8B6D00DFA6D6 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557E52B1F8B6200DFA6D6 /* SourceSansPro-SemiBold.ttf */; };
+		70D557EF2B1F8B6D00DFA6D6 /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557E42B1F8B6200DFA6D6 /* SourceSansPro-BoldItalic.ttf */; };
+		70D557F02B1F8B6D00DFA6D6 /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557DF2B1F8B6100DFA6D6 /* SourceSansPro-ExtraLight.ttf */; };
+		70D557F12B1F8B6D00DFA6D6 /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557E12B1F8B6200DFA6D6 /* SourceSansPro-ExtraLightItalic.ttf */; };
 		70E592392B0A695900DEFC13 /* HomeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E592382B0A695900DEFC13 /* HomeDependencyContainer.swift */; };
 		70E5923C2B0A6B4800DEFC13 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5923B2B0A6B4800DEFC13 /* HomeCoordinator.swift */; };
 		70E5923E2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5923D2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift */; };
@@ -170,6 +185,21 @@
 		706199922B06EA3600762BAF /* LaunchViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControllerFactory.swift; sourceTree = "<group>"; };
 		706199942B06EAF000762BAF /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
 		706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Styling.swift"; sourceTree = "<group>"; };
+		70D557D32B1F73F600DFA6D6 /* CharactersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewCell.swift; sourceTree = "<group>"; };
+		70D557D52B1F741600DFA6D6 /* CharactersCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		70D557D72B1F78CC00DFA6D6 /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		70D557DA2B1F8B6100DFA6D6 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		70D557DB2B1F8B6100DFA6D6 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
+		70D557DC2B1F8B6100DFA6D6 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
+		70D557DD2B1F8B6100DFA6D6 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		70D557DE2B1F8B6100DFA6D6 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		70D557DF2B1F8B6100DFA6D6 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		70D557E02B1F8B6100DFA6D6 /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		70D557E12B1F8B6200DFA6D6 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		70D557E22B1F8B6200DFA6D6 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		70D557E32B1F8B6200DFA6D6 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		70D557E42B1F8B6200DFA6D6 /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		70D557E52B1F8B6200DFA6D6 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
 		70E592382B0A695900DEFC13 /* HomeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependencyContainer.swift; sourceTree = "<group>"; };
 		70E5923B2B0A6B4800DEFC13 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		70E5923D2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +346,7 @@
 		706199002B06842A00762BAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				70D557D92B1F8B3500DFA6D6 /* Fonts */,
 				706198D42B067F7800762BAF /* Assets.xcassets */,
 				706198D62B067F7800762BAF /* LaunchScreen.storyboard */,
 				706198D92B067F7800762BAF /* Info.plist */,
@@ -326,6 +357,7 @@
 		706199012B06846F00762BAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				70D557D12B1F73B500DFA6D6 /* Cells */,
 				706198CF2B067F7500762BAF /* HomeViewController.swift */,
 				70E592422B0A6C8D00DEFC13 /* HomeRootView.swift */,
 				70E592442B0A6C9D00DEFC13 /* HomeViewModel.swift */,
@@ -367,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				70E844202B07FA6A001525FD /* Character.swift */,
+				70D557D72B1F78CC00DFA6D6 /* ImageAsset.swift */,
 				7061990E2B068CDC00762BAF /* Others */,
 			);
 			path = Entities;
@@ -672,6 +705,42 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		70D557D12B1F73B500DFA6D6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				70D557D22B1F73CA00DFA6D6 /* CharactersCollectionViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		70D557D22B1F73CA00DFA6D6 /* CharactersCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				70D557D32B1F73F600DFA6D6 /* CharactersCollectionViewCell.swift */,
+				70D557D52B1F741600DFA6D6 /* CharactersCollectionViewCellViewModel.swift */,
+			);
+			path = CharactersCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		70D557D92B1F8B3500DFA6D6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				70D557DD2B1F8B6100DFA6D6 /* SourceSansPro-Black.ttf */,
+				70D557DB2B1F8B6100DFA6D6 /* SourceSansPro-BlackItalic.ttf */,
+				70D557E22B1F8B6200DFA6D6 /* SourceSansPro-Bold.ttf */,
+				70D557E42B1F8B6200DFA6D6 /* SourceSansPro-BoldItalic.ttf */,
+				70D557DF2B1F8B6100DFA6D6 /* SourceSansPro-ExtraLight.ttf */,
+				70D557E12B1F8B6200DFA6D6 /* SourceSansPro-ExtraLightItalic.ttf */,
+				70D557DA2B1F8B6100DFA6D6 /* SourceSansPro-Italic.ttf */,
+				70D557DC2B1F8B6100DFA6D6 /* SourceSansPro-Light.ttf */,
+				70D557E32B1F8B6200DFA6D6 /* SourceSansPro-LightItalic.ttf */,
+				70D557DE2B1F8B6100DFA6D6 /* SourceSansPro-Regular.ttf */,
+				70D557E52B1F8B6200DFA6D6 /* SourceSansPro-SemiBold.ttf */,
+				70D557E02B1F8B6100DFA6D6 /* SourceSansPro-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		70E592372B0A692900DEFC13 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -823,7 +892,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				706198D82B067F7800762BAF /* LaunchScreen.storyboard in Resources */,
+				70D557EC2B1F8B6D00DFA6D6 /* SourceSansPro-Italic.ttf in Resources */,
+				70D557E62B1F8B6900DFA6D6 /* SourceSansPro-Black.ttf in Resources */,
+				70D557EB2B1F8B6D00DFA6D6 /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
+				70D557EE2B1F8B6D00DFA6D6 /* SourceSansPro-SemiBold.ttf in Resources */,
+				70D557EA2B1F8B6D00DFA6D6 /* SourceSansPro-BlackItalic.ttf in Resources */,
+				70D557ED2B1F8B6D00DFA6D6 /* SourceSansPro-LightItalic.ttf in Resources */,
+				70D557EF2B1F8B6D00DFA6D6 /* SourceSansPro-BoldItalic.ttf in Resources */,
+				70D557F12B1F8B6D00DFA6D6 /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
+				70D557F02B1F8B6D00DFA6D6 /* SourceSansPro-ExtraLight.ttf in Resources */,
+				70D557E82B1F8B6D00DFA6D6 /* SourceSansPro-Bold.ttf in Resources */,
 				706198D52B067F7800762BAF /* Assets.xcassets in Resources */,
+				70D557E72B1F8B6D00DFA6D6 /* SourceSansPro-Light.ttf in Resources */,
+				70D557E92B1F8B6D00DFA6D6 /* SourceSansPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +1045,7 @@
 				7061990C2B068C6800762BAF /* EndpointRouter.swift in Sources */,
 				706199812B06E62900762BAF /* LaunchDependencyContainer.swift in Sources */,
 				706199612B06DD9000762BAF /* ColorManager.swift in Sources */,
+				70D557D42B1F73F600DFA6D6 /* CharactersCollectionViewCell.swift in Sources */,
 				706199632B06DE1F00762BAF /* Dimensions.swift in Sources */,
 				7061995F2B06DD6800762BAF /* UISearchBar+Styling.swift in Sources */,
 				706199572B06DC4F00762BAF /* UILabel+Styling.swift in Sources */,
@@ -983,10 +1065,12 @@
 				70E592412B0A6B7B00DEFC13 /* HomeCoordinatorFactory.swift in Sources */,
 				706199462B06D8A300762BAF /* AnchoredConstraints.swift in Sources */,
 				706199782B06E1B600762BAF /* Coordinator.swift in Sources */,
+				70D557D82B1F78CC00DFA6D6 /* ImageAsset.swift in Sources */,
 				706199102B06A1C900762BAF /* GIError.swift in Sources */,
 				706199262B06AED000762BAF /* ContentUseCase.swift in Sources */,
 				706199512B06DB6800762BAF /* UICollectionViewCell+Dequeue.swift in Sources */,
 				70E592472B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift in Sources */,
+				70D557D62B1F741600DFA6D6 /* CharactersCollectionViewCellViewModel.swift in Sources */,
 				7061996B2B06E00C00762BAF /* ViewModelType.swift in Sources */,
 				706199132B06A3DE00762BAF /* MainNetworkService.swift in Sources */,
 				70E592392B0A695900DEFC13 /* HomeDependencyContainer.swift in Sources */,

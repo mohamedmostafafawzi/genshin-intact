@@ -66,9 +66,9 @@ public enum CharacterRarity: Int {
 
 // MARK: - Outfit
 public struct Outfit {
-    let type, name, description: String
-    let rarity, price: Int
-    let image: String
+    let type, name, description: String?
+    let rarity, price: Int?
+    let image: String?
 }
 
 // MARK: - SkillTalent
