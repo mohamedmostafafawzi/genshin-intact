@@ -11,7 +11,7 @@ import UIKit
 class CharactersCollectionViewCell: NiblessCollectionViewCell {
     
     // MARK: - Views
-    private let characterImageView = UIImageView().style(image: UIImage(systemName: "circle.fill"),
+    private let characterImageView = UIImageView().style(image: UIImage(named: "image-placeholder"),
                                                      contentMode: .scaleAspectFill,
                                                      cornerRadius: Dimensions.cornerRadius)
     private let characterNameLabel = UILabel().style(font: .bold(size: .bodyL),
@@ -25,11 +25,10 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
     
     // MARK: - Methods
     func configure(with viewModel: CharactersCollectionViewCellViewModel) {
-        // TODO : - Configure Image
-//        characterImageView.setImage(
-//            url: viewModel.imageURL,
-//            placeholder: UIImage(named: "image-placeholder")
-//        )
+        characterImageView.setImage(
+            url: viewModel.imageURL,
+            placeholder: UIImage(named: "image-placeholder")
+        )
         characterNameLabel.text = viewModel.characterName
         characterDescriptionLabel.text = viewModel.characterDescription
     }

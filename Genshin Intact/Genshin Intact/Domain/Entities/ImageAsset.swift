@@ -13,7 +13,7 @@ public struct ImageAsset {
     
     init(character: Character, assetType: AssetType) {
         self.characterName = character.name.replacingOccurrences(of: " ", with: "-").lowercased()
-        self.imageURL = "https://api.genshin.dev/characters/\(characterName)/\(assetType)"
+        self.imageURL = "https://api.genshin.dev/characters/\(characterName)/\(assetType.rawValue)"
     }
 
 }
