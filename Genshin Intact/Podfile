@@ -13,6 +13,9 @@ target 'Genshin Intact' do
   # Reactive frameworks
   pod 'RxSwift', '6.6.0'
   pod 'RxCocoa', '6.6.0'
+  
+  # Image Processing
+  pod 'SDWebImage', '~> 5.0'
 
   target 'Genshin IntactTests' do
     inherit! :search_paths
