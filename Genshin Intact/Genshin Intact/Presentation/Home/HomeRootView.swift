@@ -11,7 +11,7 @@ class HomeRootView: NiblessView {
     
     // MARK: - Views
     private let logoImageView = UIImageView().style(tintColor: .homeTopIcon,
-                                                    image: UIImage(named: "app-logo"),
+                                                    image: UIImage(named: "home-logo"),
                                                     contentMode: .scaleAspectFit)
     
     private lazy var collectionView: UICollectionView = {
@@ -47,8 +47,8 @@ class HomeRootView: NiblessView {
 extension HomeRootView {
     override func configureViewHierarchy() {
         add(logoImageView, then: {
-            $0.anchor(.top(topAnchor, constant: 8))
-            $0.constrainHeight($0.widthAnchor)
+            $0.anchor(.top(safeAreaLayoutGuide.topAnchor, constant: 8))
+            $0.constrainHeight(50)
             $0.constrainWidth(150)
             $0.centerXToSuperview()
         })
