@@ -18,6 +18,10 @@ public extension UIColor {
     static let dendro = ColorPalette.dendro
     static let cryo = ColorPalette.cryo
     
+    // MARK: - Rarity Semantic Colors
+    static let fourStars = ColorPalette.fourStars
+    static let fiveStars = ColorPalette.fiveStars
+
     // MARK: - Text Semantic Colors
     static let headerText = evaluateColor(light: ColorPalette.black,
                                           dark: ColorPalette.white)
@@ -93,6 +97,10 @@ private struct ColorPalette {
     static let dendro = UIColor(hex: "608a00")
     static let cryo = UIColor(hex: "4682B4")
     
+    // rarity
+    static let fourStars = UIColor(hex: "826aa3")
+    static let fiveStars = UIColor(hex: "97612e")
+
     // Shades of black
     static let black = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     static let darkestGrey = #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 1)

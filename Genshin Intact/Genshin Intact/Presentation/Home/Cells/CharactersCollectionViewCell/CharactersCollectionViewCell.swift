@@ -11,6 +11,7 @@ import UIKit
 class CharactersCollectionViewCell: NiblessCollectionViewCell {
     
     // MARK: - Views
+    private let characterImageBackgroundView = UIView().style(cornerRadius: Dimensions.cornerRadius)
     private let characterImageView = UIImageView().style(image: UIImage(named: "image-placeholder"),
                                                      contentMode: .scaleAspectFill,
                                                      cornerRadius: Dimensions.cornerRadius)
@@ -29,14 +30,26 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
             url: viewModel.imageURL,
             placeholder: UIImage(named: "image-placeholder")
         )
-        characterNameLabel.text = viewModel.characterName
-        characterDescriptionLabel.text = viewModel.characterDescription
+        characterNameLabel.text = viewModel.name
+        characterDescriptionLabel.text = viewModel.description
+        viewModel.rarity == .fourStar ?
+        (characterImageBackgroundView.backgroundColor = .fourStars):
+        (characterImageBackgroundView.backgroundColor = .fiveStars)
     }
 }
 
 // MARK: - Layout
 extension CharactersCollectionViewCell {
     override func configureViewHierarchy() {
+        // Configure character image background view
+        contentView.add(characterImageBackgroundView, then: {
+            $0.anchor(.leading(contentView.leadingAnchor),
+                      .top(contentView.topAnchor),
+                      .trailing(contentView.trailingAnchor))
+            
+            $0.constrainHeight($0.widthAnchor)
+        })
+        
         // Configure character image
         contentView.add(characterImageView, then: {
             $0.anchor(.leading(contentView.leadingAnchor),

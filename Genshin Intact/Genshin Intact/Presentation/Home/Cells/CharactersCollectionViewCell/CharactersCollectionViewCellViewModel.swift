@@ -10,17 +10,18 @@ import Foundation
 struct CharactersCollectionViewCellViewModel {
     
     // MARK: - Properties
-    let characterName: String
-    let characterDescription: String?
+    let name: String
+    let description: String?
     let imageURL: String?
-    let characterObject: Character
+    let rarity: CharacterRarity
+    let object: Character
     
     // MARK: - Initialzier
     init(from character: Character) {
-        self.characterName = character.name
-        self.characterDescription = character.description
+        self.name = character.name
+        self.description = character.description
         self.imageURL = ImageAsset(character: character, assetType: .iconBig).imageURL
-        self.characterObject = character
-
+        self.rarity = character.rarity
+        self.object = character
     }
 }
