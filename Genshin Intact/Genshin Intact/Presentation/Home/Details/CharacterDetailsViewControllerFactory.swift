@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol CharacterDetailsViewControllerFactory {
-    func makeCharacterDetailsViewController() -> CharacterDetailsViewController
+    func makeCharacterDetailsViewController(with character: Character) -> CharacterDetailsViewController
 }

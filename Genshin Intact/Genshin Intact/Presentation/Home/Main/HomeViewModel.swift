@@ -69,8 +69,8 @@ public class HomeViewModel: ViewModelType {
     
     private func subscribeToCharacterSelected() {
         input.characterSelected.subscribe(onNext: { [weak self] character in
-            // TODO: - Navigate to details
-            
+            guard let self else { return }
+            self.navigationDelegate?.viewDetails(of: character.object)
         }).disposed(by: disposeBag)
     }
 }

@@ -29,10 +29,12 @@ public class CharacterDetailsViewModel: ViewModelType {
     private let disposeBag = DisposeBag()
     
     // MARK: - Initializer
-    public init(navigationDelegate: CharacterDetailsViewControllerNavigationDelegate,
-                contentUseCase: ContentUseCase) {
+    public init(character: Character,
+                navigationDelegate: CharacterDetailsViewControllerNavigationDelegate) {
         
         self.navigationDelegate = navigationDelegate
+        
+        characterSubject.onNext(character)
         
         // Configure input & output
         input = Input()

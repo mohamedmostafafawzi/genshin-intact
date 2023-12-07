@@ -18,16 +18,19 @@ class HomeCoordinator: Coordinator {
     
     // MARK: Factories
     private let homeViewControllerFactory: HomeViewControllerFactory
+    private let characterDetailsViewControllerFactory: CharacterDetailsViewControllerFactory
     
     // MARK: - Initializer
     init(
         presenter: UIViewController,
         navigationDelegate: HomeCoordinatorNavigationDelegate,
-        homeViewControllerFactory: HomeViewControllerFactory
+        homeViewControllerFactory: HomeViewControllerFactory,
+        characterDetailsViewControllerFactory: CharacterDetailsViewControllerFactory
     ) {
         self.presenter = presenter
         self.navigationDelegate = navigationDelegate
         self.homeViewControllerFactory = homeViewControllerFactory
+        self.characterDetailsViewControllerFactory = characterDetailsViewControllerFactory
     }
     
     func start(
@@ -49,5 +52,12 @@ class HomeCoordinator: Coordinator {
 
 // MARK: - Navigation delegates
 extension HomeCoordinator: HomeViewControllerNavigationDelegate {
-    
+    func viewDetails(of character: Character) {
+        let characterDetailsVC = characterDetailsViewControllerFactory.makeCharacterDetailsViewController(with: character)
+        presenter.navigationController?.pushViewController(characterDetailsVC, animated: true)
+    }
+}
+
+extension HomeCoordinator: CharacterDetailsViewControllerNavigationDelegate {
+
 }
