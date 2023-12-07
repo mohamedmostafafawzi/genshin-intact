@@ -56,8 +56,7 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
         case .pyro:
             elementImageView.image = UIImage(named: "element-pyro")
         }
-        elementImageView.backgroundColor = .background
-
+        elementImageView.backgroundColor = .secondaryBackground
     }
 }
 
@@ -100,8 +99,8 @@ extension CharactersCollectionViewCell {
         
         // Configure element image
         contentView.add(elementImageView, then: {
-            $0.centerYTo(characterImageView.topAnchor, constant: 15)
-            $0.centerXTo(characterImageView.trailingAnchor, constant: -15)
+            $0.centerYTo(characterImageView.topAnchor, constant: 20)
+            $0.centerXTo(characterImageView.trailingAnchor, constant: -20)
             $0.constrainHeight(30)
             $0.constrainWidth($0.heightAnchor)
         })

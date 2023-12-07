@@ -12,6 +12,20 @@ public struct ImageAsset {
     let imageURL: String
     
     init(character: Character, assetType: AssetType) {
+        guard character.name != "Traveler" else {
+            self.characterName = character.name.lowercased()
+            let vision = character.vision.rawValue.lowercased()
+            self.imageURL = "https://api.genshin.dev/characters/\(characterName)-\(vision)/\(assetType.rawValue)-aether"
+            print(imageURL)
+            return
+        }
+        
+        guard !character.name.contains("Kamisato") else {
+            self.characterName = character.name.components(separatedBy: " ")[1].lowercased()
+            self.imageURL = "https://api.genshin.dev/characters/\(characterName)/\(assetType.rawValue)"
+            return
+        }
+        
         self.characterName = character.name.replacingOccurrences(of: " ", with: "-").lowercased()
         self.imageURL = "https://api.genshin.dev/characters/\(characterName)/\(assetType.rawValue)"
     }
