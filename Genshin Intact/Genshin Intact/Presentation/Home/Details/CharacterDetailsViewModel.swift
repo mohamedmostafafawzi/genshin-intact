@@ -18,11 +18,10 @@ public class CharacterDetailsViewModel: ViewModelType {
     }
     
     public struct Output {
-        let character: PublishSubject<Character>
+        let character: Character
     }
         
     // MARK: - Subjects
-    private let characterSubject = PublishSubject<Character>()
     
     // MARK: - Properties
     private weak var navigationDelegate: CharacterDetailsViewControllerNavigationDelegate?
@@ -34,11 +33,9 @@ public class CharacterDetailsViewModel: ViewModelType {
         
         self.navigationDelegate = navigationDelegate
         
-        characterSubject.onNext(character)
-        
         // Configure input & output
         input = Input()
-        output = Output(character: characterSubject)
+        output = Output(character: character)
     }
     
     // MARK: - Internal logic

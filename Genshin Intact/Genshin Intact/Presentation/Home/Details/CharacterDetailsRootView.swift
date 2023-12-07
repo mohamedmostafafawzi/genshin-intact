@@ -10,11 +10,15 @@ import UIKit
 class CharacterDetailsRootView: NiblessView {
     
     // MARK: - Views
-    
+    private let characterImageView = UIImageView().style(contentMode: .scaleAspectFill)
     
     // MARK: - Initializer
-    init() {
+    init(character: Character) {
         super.init(frame: .zero)
+        
+        let imageURL = ImageAsset(character: character, assetType: .card).imageURL
+        characterImageView.setImage(url: imageURL,
+                                    placeholder: UIImage(named: "image-placeholder"))
     }
     
     // MARK: - Methods
@@ -26,6 +30,12 @@ class CharacterDetailsRootView: NiblessView {
 // MARK: - Layout
 extension CharacterDetailsRootView {
     override func configureViewHierarchy() {
-        
+        // Configure character image
+        add(characterImageView, then: {
+            $0.anchor(.leading(self.leadingAnchor),
+                      .top(self.topAnchor),
+                      .trailing(self.trailingAnchor),
+                      .bottom(self.bottomAnchor))
+        })
     }
 }

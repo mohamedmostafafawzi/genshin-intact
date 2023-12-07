@@ -28,7 +28,7 @@ public class CharacterDetailsViewController: NiblessViewController {
     
     // MARK: - Methods
     public override func loadView() {
-        rootView = CharacterDetailsRootView()
+        rootView = CharacterDetailsRootView(character: viewModel.output.character)
         view = rootView
     }
     

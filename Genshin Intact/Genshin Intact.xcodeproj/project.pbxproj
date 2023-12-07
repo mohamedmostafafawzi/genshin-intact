@@ -766,11 +766,11 @@
 		70D558292B220A5A00DFA6D6 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				70D5582E2B220A9600DFA6D6 /* CharacterDetailsRootView.swift */,
 				70D5582D2B220A9600DFA6D6 /* CharacterDetailsViewController.swift */,
-				70D5582C2B220A9600DFA6D6 /* CharacterDetailsViewControllerFactory.swift */,
-				70D5582B2B220A9500DFA6D6 /* CharacterDetailsViewControllerNavigationDelegate.swift */,
+				70D5582E2B220A9600DFA6D6 /* CharacterDetailsRootView.swift */,
 				70D5582A2B220A9500DFA6D6 /* CharacterDetailsViewModel.swift */,
+				70D5582B2B220A9500DFA6D6 /* CharacterDetailsViewControllerNavigationDelegate.swift */,
+				70D5582C2B220A9600DFA6D6 /* CharacterDetailsViewControllerFactory.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
