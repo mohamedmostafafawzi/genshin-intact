@@ -54,7 +54,7 @@ class HomeCoordinator: Coordinator {
 extension HomeCoordinator: HomeViewControllerNavigationDelegate {
     func viewDetails(of character: Character) {
         let characterDetailsVC = characterDetailsViewControllerFactory.makeCharacterDetailsViewController(with: character)
-        presenter.navigationController?.pushViewController(characterDetailsVC, animated: true)
+        presenter.present(characterDetailsVC, animated: true)
     }
 }
 
