@@ -359,12 +359,7 @@
 		706199012B06846F00762BAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				70D557D12B1F73B500DFA6D6 /* Cells */,
-				706198CF2B067F7500762BAF /* HomeViewController.swift */,
-				70E592422B0A6C8D00DEFC13 /* HomeRootView.swift */,
-				70E592442B0A6C9D00DEFC13 /* HomeViewModel.swift */,
-				70E592462B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift */,
-				70E592482B0A6CC600DEFC13 /* HomeViewControllerFactory.swift */,
+				70D5581D2B22097C00DFA6D6 /* Main */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -742,6 +737,19 @@
 				70D557E02B1F8B6100DFA6D6 /* SourceSansPro-SemiBoldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		70D5581D2B22097C00DFA6D6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				70D557D12B1F73B500DFA6D6 /* Cells */,
+				706198CF2B067F7500762BAF /* HomeViewController.swift */,
+				70E592422B0A6C8D00DEFC13 /* HomeRootView.swift */,
+				70E592442B0A6C9D00DEFC13 /* HomeViewModel.swift */,
+				70E592462B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift */,
+				70E592482B0A6CC600DEFC13 /* HomeViewControllerFactory.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		70E592372B0A692900DEFC13 /* Home */ = {
