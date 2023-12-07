@@ -16,7 +16,6 @@ public struct ImageAsset {
             self.characterName = character.name.lowercased()
             let vision = character.vision.rawValue.lowercased()
             self.imageURL = "https://api.genshin.dev/characters/\(characterName)-\(vision)/\(assetType.rawValue)-aether"
-            print(imageURL)
             return
         }
         
