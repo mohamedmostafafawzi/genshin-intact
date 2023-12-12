@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol HomeViewControllerNavigationDelegate: AnyObject {
-    
+    func viewDetails(of character: Character)
 }

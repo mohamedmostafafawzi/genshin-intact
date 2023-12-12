@@ -23,7 +23,8 @@ struct CharacterDTO: Codable {
     let passiveTalents, constellations: [ConstellationDTO]
     let visionKey: VisionKeyDTO
     let weaponType: WeaponTypeDTO
-    let gender, specialDish: String?
+    let gender: GenderDTO?
+    let specialDish: String?
     let outfits: [OutfitDTO]?
 
     enum CodingKeys: String, CodingKey {
@@ -52,7 +53,7 @@ extension CharacterDTO {
             constellations: constellations.map { $0.toDomain() },
             visionKey: visionKey.toDomain(),
             weaponType: weaponType.toDomain(),
-            gender: gender,
+            gender: gender?.toDomain() ?? .unknown,
             specialDish: specialDish,
             outfits: outfits?.map { $0.toDomain() }
         )
@@ -321,3 +322,16 @@ extension WeaponTypeDTO {
     }
 }
 
+enum GenderDTO: String, Codable {
+    case male = "Male"
+    case female = "Female"
+}
+
+extension GenderDTO {
+    func toDomain() -> Gender {
+        switch self {
+        case .male: return .male
+        case .female: return .female
+        }
+    }
+}

@@ -25,7 +25,8 @@ public struct Character {
     let passiveTalents, constellations: [Constellation]
     let visionKey: VisionKey
     let weaponType: WeaponType
-    let gender, specialDish: String?
+    let gender: Gender
+    let specialDish: String?
     let outfits: [Outfit]?
 }
 
@@ -56,6 +57,7 @@ public enum Nation: String {
     case outlander = "Outlander"
     case snezhnaya = "Snezhnaya"
     case sumeru = "Sumeru"
+    case fontaine = "Fontaine"
     case unknown = "Unknown"
 }
 
@@ -135,4 +137,10 @@ public enum WeaponType: String {
     case claymore = "CLAYMORE"
     case polearm = "POLEARM"
     case sword = "SWORD"
+}
+
+public enum Gender: String {
+    case male = "Male"
+    case female = "Female"
+    case unknown
 }
