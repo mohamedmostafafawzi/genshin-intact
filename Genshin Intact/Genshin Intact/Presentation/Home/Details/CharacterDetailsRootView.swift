@@ -129,35 +129,6 @@ extension CharacterDetailsRootView {
                       .trailing(infoVisualEffectView.trailingAnchor, constant: 4))
             $0.constrainWidth(50)
         })
-        
-//        // Configure element image
-//        add(elementImageView, then: {
-//            $0.anchor(.top(infoVisualEffectView.topAnchor, constant: 8))
-//            $0.centerXTo(infoVisualEffectView.centerXAnchor)
-//            $0.constrainHeight(30)
-//            $0.constrainWidth($0.heightAnchor)
-//            
-//        })
-//        
-//        // Configure region image
-//        add(regionImageView, then: {
-//            $0.anchor(.top(elementImageView.bottomAnchor, constant: 8))
-//            $0.centerXTo(infoVisualEffectView.centerXAnchor)
-//            $0.constrainHeight(30)
-//            $0.constrainWidth($0.heightAnchor)
-//            
-//        })
-//        
-//        // Configure region image
-//        add(genderImageView, then: {
-//            $0.anchor(.top(regionImageView.bottomAnchor, constant: 8),
-//                      .bottom(infoVisualEffectView.bottomAnchor, constant: 8))
-//            $0.centerXTo(infoVisualEffectView.centerXAnchor)
-//            $0.constrainHeight(30)
-//            $0.constrainWidth($0.heightAnchor)
-//            
-//        })
-        
     }
     
     private func configureTopInfoStackView() -> UIStackView {
