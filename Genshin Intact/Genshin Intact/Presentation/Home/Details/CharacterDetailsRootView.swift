@@ -18,6 +18,9 @@ class CharacterDetailsRootView: NiblessView {
     private let elementImageView = UIImageView().style(image: UIImage(named: "image-placeholder"),
                                                        contentMode: .scaleAspectFill,
                                                        cornerRadius: 15)
+    private let regionImageView = UIImageView().style(image: UIImage(named: "image-placeholder"),
+                                                       contentMode: .scaleAspectFill,
+                                                       cornerRadius: 15)
     // MARK: - Initializer
     init(character: Character) {
         super.init(frame: .zero)
@@ -46,6 +49,21 @@ class CharacterDetailsRootView: NiblessView {
             elementImageView.image = UIImage(named: "element-hydro")
         case .pyro:
             elementImageView.image = UIImage(named: "element-pyro")
+        }
+        
+        switch character.nation {
+        case .inazuma:
+            regionImageView.image = UIImage(named: "inazuma")
+        case .liyue:
+            regionImageView.image = UIImage(named: "liyue")
+        case .mondstadt:
+            regionImageView.image = UIImage(named: "mondstadt")
+        case .sumeru:
+            regionImageView.image = UIImage(named: "sumeru")
+        case .fontaine:
+            regionImageView.image = UIImage(named: "fontaine")
+        default:
+            regionImageView.image = UIImage(named: "image-placeholder")
         }
     }
     
@@ -98,7 +116,16 @@ extension CharacterDetailsRootView {
         
         // Configure element image
         add(elementImageView, then: {
-            $0.anchor(.top(infoVisualEffectView.topAnchor, constant: 8),
+            $0.anchor(.top(infoVisualEffectView.topAnchor, constant: 8))
+            $0.centerXTo(infoVisualEffectView.centerXAnchor)
+            $0.constrainHeight(30)
+            $0.constrainWidth($0.heightAnchor)
+            
+        })
+        
+        // Configure element image
+        add(regionImageView, then: {
+            $0.anchor(.top(elementImageView.bottomAnchor, constant: 8),
                       .bottom(infoVisualEffectView.bottomAnchor, constant: 8))
             $0.centerXTo(infoVisualEffectView.centerXAnchor)
             $0.constrainHeight(30)

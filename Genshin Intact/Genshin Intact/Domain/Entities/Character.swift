@@ -56,6 +56,7 @@ public enum Nation: String {
     case outlander = "Outlander"
     case snezhnaya = "Snezhnaya"
     case sumeru = "Sumeru"
+    case fontaine = "Fontaine"
     case unknown = "Unknown"
 }
 
