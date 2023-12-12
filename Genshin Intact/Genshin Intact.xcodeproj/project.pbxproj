@@ -100,6 +100,7 @@
 		70E592492B0A6CC600DEFC13 /* HomeViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E592482B0A6CC600DEFC13 /* HomeViewControllerFactory.swift */; };
 		70E844212B07FA6A001525FD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E844202B07FA6A001525FD /* Character.swift */; };
 		70E844232B07FB4E001525FD /* CharacterDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */; };
+		70F322832B28C3B50041B835 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F322822B28C3B50041B835 /* GradientView.swift */; };
 		B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */; };
 		B595E8A36F5A70330F8F08BA /* Pods_Genshin_IntactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */; };
 /* End PBXBuildFile section */
@@ -222,6 +223,7 @@
 		70E592482B0A6CC600DEFC13 /* HomeViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerFactory.swift; sourceTree = "<group>"; };
 		70E844202B07FA6A001525FD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterDTO+Mapping.swift"; sourceTree = "<group>"; };
+		70F322822B28C3B50041B835 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.release.xcconfig"; sourceTree = "<group>"; };
 		84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin IntactTests.debug.xcconfig"; path = "Target Support Files/Pods-Genshin IntactTests/Pods-Genshin IntactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_IntactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -513,6 +515,7 @@
 		7061992B2B06D52800762BAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				70F322822B28C3B50041B835 /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1104,6 +1107,7 @@
 				706199782B06E1B600762BAF /* Coordinator.swift in Sources */,
 				70D557D82B1F78CC00DFA6D6 /* ImageAsset.swift in Sources */,
 				706199102B06A1C900762BAF /* GIError.swift in Sources */,
+				70F322832B28C3B50041B835 /* GradientView.swift in Sources */,
 				706199262B06AED000762BAF /* ContentUseCase.swift in Sources */,
 				706199512B06DB6800762BAF /* UICollectionViewCell+Dequeue.swift in Sources */,
 				70E592472B0A6CB200DEFC13 /* HomeViewControllerNavigationDelegate.swift in Sources */,
