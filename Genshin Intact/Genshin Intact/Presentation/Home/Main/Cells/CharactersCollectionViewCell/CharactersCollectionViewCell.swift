@@ -56,7 +56,6 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
         case .pyro:
             elementImageView.image = UIImage(named: "element-pyro")
         }
-        elementImageView.backgroundColor = .secondaryBackground
     }
 }
 
@@ -97,11 +96,23 @@ extension CharactersCollectionViewCell {
             $0.centerXTo(titleLabel.centerXAnchor)
         })
         
+        let blurEffect = UIBlurEffect(style: .systemMaterial)
+        let infoVisualEffectView = UIVisualEffectView(effect: blurEffect)
+        infoVisualEffectView.layer.cornerRadius = 10
+        infoVisualEffectView.clipsToBounds = true
+        
+        add(infoVisualEffectView, then: {
+            $0.centerYTo(characterImageView.topAnchor, constant: 15)
+            $0.centerXTo(characterImageView.leadingAnchor, constant: 15)
+            $0.constrainHeight(20)
+            $0.constrainWidth($0.heightAnchor)
+        })
+        
         // Configure element image
-        contentView.add(elementImageView, then: {
-            $0.centerYTo(characterImageView.topAnchor, constant: 20)
-            $0.centerXTo(characterImageView.trailingAnchor, constant: -20)
-            $0.constrainHeight(30)
+        add(elementImageView, then: {
+            $0.centerYTo(characterImageView.topAnchor, constant: 15)
+            $0.centerXTo(characterImageView.leadingAnchor, constant: 15)
+            $0.constrainHeight(20)
             $0.constrainWidth($0.heightAnchor)
         })
     }
