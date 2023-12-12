@@ -15,12 +15,10 @@ class CharacterDetailsRootView: NiblessView {
                                                             textColor: .headerText,
                                                             textAlignment: .center,
                                                             numberOfLines: 0)
-    private let elementImageView = UIImageView().style(image: UIImage(named: "image-placeholder"),
-                                                       contentMode: .scaleAspectFill,
-                                                       cornerRadius: 15)
-    private let regionImageView = UIImageView().style(image: UIImage(named: "image-placeholder"),
-                                                       contentMode: .scaleAspectFill,
-                                                       cornerRadius: 15)
+    private let elementImageView = UIImageView().style(image: UIImage(named: "image-placeholder"), contentMode: .scaleAspectFill)
+    private let regionImageView = UIImageView().style(image: UIImage(named: "image-placeholder"), contentMode: .scaleAspectFill)
+    private let genderImageView = UIImageView().style(image: UIImage(named: "image-placeholder"), contentMode: .scaleAspectFill)
+    
     // MARK: - Initializer
     init(character: Character) {
         super.init(frame: .zero)
@@ -63,7 +61,16 @@ class CharacterDetailsRootView: NiblessView {
         case .fontaine:
             regionImageView.image = UIImage(named: "fontaine")
         default:
-            regionImageView.image = UIImage(named: "image-placeholder")
+            regionImageView.isHidden = true
+        }
+        
+        switch character.gender {
+        case .male:
+            genderImageView.image = UIImage(named: "male")
+        case .female:
+            genderImageView.image = UIImage(named: "female")
+        case .unknown:
+            genderImageView.isHidden = true
         }
     }
     
@@ -114,23 +121,62 @@ extension CharacterDetailsRootView {
             $0.constrainWidth(50)
         })
         
-        // Configure element image
-        add(elementImageView, then: {
-            $0.anchor(.top(infoVisualEffectView.topAnchor, constant: 8))
-            $0.centerXTo(infoVisualEffectView.centerXAnchor)
-            $0.constrainHeight(30)
-            $0.constrainWidth($0.heightAnchor)
-            
+        let topInfoStackView = configureTopInfoStackView()
+        add(topInfoStackView, then: {
+            $0.anchor(.top(infoVisualEffectView.topAnchor, constant: 4),
+                      .bottom(infoVisualEffectView.bottomAnchor, constant: 4),
+                      .leading(infoVisualEffectView.leadingAnchor, constant: 4),
+                      .trailing(infoVisualEffectView.trailingAnchor, constant: 4))
+            $0.constrainWidth(50)
         })
         
-        // Configure element image
-        add(regionImageView, then: {
-            $0.anchor(.top(elementImageView.bottomAnchor, constant: 8),
-                      .bottom(infoVisualEffectView.bottomAnchor, constant: 8))
-            $0.centerXTo(infoVisualEffectView.centerXAnchor)
-            $0.constrainHeight(30)
-            $0.constrainWidth($0.heightAnchor)
-            
-        })
+//        // Configure element image
+//        add(elementImageView, then: {
+//            $0.anchor(.top(infoVisualEffectView.topAnchor, constant: 8))
+//            $0.centerXTo(infoVisualEffectView.centerXAnchor)
+//            $0.constrainHeight(30)
+//            $0.constrainWidth($0.heightAnchor)
+//            
+//        })
+//        
+//        // Configure region image
+//        add(regionImageView, then: {
+//            $0.anchor(.top(elementImageView.bottomAnchor, constant: 8))
+//            $0.centerXTo(infoVisualEffectView.centerXAnchor)
+//            $0.constrainHeight(30)
+//            $0.constrainWidth($0.heightAnchor)
+//            
+//        })
+//        
+//        // Configure region image
+//        add(genderImageView, then: {
+//            $0.anchor(.top(regionImageView.bottomAnchor, constant: 8),
+//                      .bottom(infoVisualEffectView.bottomAnchor, constant: 8))
+//            $0.centerXTo(infoVisualEffectView.centerXAnchor)
+//            $0.constrainHeight(30)
+//            $0.constrainWidth($0.heightAnchor)
+//            
+//        })
+        
+    }
+    
+    private func configureTopInfoStackView() -> UIStackView {
+        let stackView = UIStackView(arrangedSubviews: [elementImageView, regionImageView, genderImageView])
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        elementImageView.constrainHeight(30)
+        elementImageView.constrainWidth(elementImageView.heightAnchor)
+        regionImageView.constrainHeight(30)
+        regionImageView.constrainWidth(regionImageView.heightAnchor)
+        genderImageView.constrainHeight(25)
+        genderImageView.constrainWidth(genderImageView.heightAnchor)
+        let padding = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10)
+        genderImageView.layoutMargins = padding
+        stackView.add(elementImageView)
+        stackView.add(regionImageView)
+        stackView.add(genderImageView)
+        return stackView
     }
 }
