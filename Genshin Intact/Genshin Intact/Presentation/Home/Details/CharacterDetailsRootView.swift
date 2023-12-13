@@ -32,7 +32,8 @@ class CharacterDetailsRootView: NiblessView {
             descriptionLabel.text = "Unfortunately, we don't know any thing about this character. How mysterious!"
         }
         
-        switch character.vision {
+        elementImageView.isHidden = false
+        switch character.element {
         case .anemo:
             elementImageView.image = UIImage(named: "element-anemo")
         case .cryo:
@@ -47,9 +48,11 @@ class CharacterDetailsRootView: NiblessView {
             elementImageView.image = UIImage(named: "element-hydro")
         case .pyro:
             elementImageView.image = UIImage(named: "element-pyro")
+        case .none:
+            elementImageView.isHidden = true
         }
         
-        switch character.nation {
+        switch character.region {
         case .inazuma:
             regionImageView.image = UIImage(named: "inazuma")
         case .liyue:
@@ -69,8 +72,6 @@ class CharacterDetailsRootView: NiblessView {
             genderImageView.image = UIImage(named: "male")
         case .female:
             genderImageView.image = UIImage(named: "female")
-        case .unknown:
-            genderImageView.isHidden = true
         }
     }
     
@@ -123,8 +124,8 @@ extension CharacterDetailsRootView {
         
         let topInfoStackView = configureTopInfoStackView()
         add(topInfoStackView, then: {
-            $0.anchor(.top(infoVisualEffectView.topAnchor, constant: 4),
-                      .bottom(infoVisualEffectView.bottomAnchor, constant: 4),
+            $0.anchor(.top(infoVisualEffectView.topAnchor, constant: 10),
+                      .bottom(infoVisualEffectView.bottomAnchor, constant: 10),
                       .leading(infoVisualEffectView.leadingAnchor, constant: 4),
                       .trailing(infoVisualEffectView.trailingAnchor, constant: 4))
             $0.constrainWidth(50)
@@ -136,7 +137,6 @@ extension CharacterDetailsRootView {
         stackView.axis = .vertical
         stackView.spacing = 8
         stackView.alignment = .center
-        stackView.distribution = .fillEqually
         elementImageView.constrainHeight(30)
         elementImageView.constrainWidth(elementImageView.heightAnchor)
         regionImageView.constrainHeight(30)

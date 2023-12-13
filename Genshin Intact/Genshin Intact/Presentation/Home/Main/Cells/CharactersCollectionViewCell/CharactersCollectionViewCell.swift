@@ -12,16 +12,12 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
     
     // MARK: - Views
     private let characterImageBackgroundView = UIView().style(cornerRadius: Dimensions.cornerRadius)
-    private let characterImageView = UIImageView().style(contentMode: .scaleAspectFit,
+    private let characterImageView = UIImageView().style(contentMode: .scaleAspectFill,
                                                          cornerRadius: Dimensions.cornerRadius)
     private let titleLabel = UILabel().style(font: .regular(size: .bodyM),
-                                                     textColor: .headerText,
-                                                     textAlignment: .center,
-                                                     numberOfLines: 1)
-    private let subtitleLabel = UILabel().style(font: .regular(size: .bodyM),
-                                                            textColor: .headerText,
-                                                            textAlignment: .center,
-                                                            numberOfLines: 1)
+                                             textColor: .headerLightContentText,
+                                             textAlignment: .center,
+                                             numberOfLines: 1)
     private let elementImageView = UIImageView().style(image: UIImage(named: "image-placeholder"),
                                                        contentMode: .scaleAspectFill,
                                                        cornerRadius: 15)
@@ -33,7 +29,6 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
     func configure(with viewModel: CharactersCollectionViewCellViewModel) {
         characterImageView.setImage(url: viewModel.imageURL)
         titleLabel.text = viewModel.title
-        subtitleLabel.text = viewModel.subtitle
         
         switch viewModel.rarity {
         case .fourStar:
@@ -46,7 +41,8 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
             fiveStarsGradientView.isHidden = false
         }
         
-        switch viewModel.vision {
+        elementImageView.isHidden = false
+        switch viewModel.element {
         case .anemo:
             elementImageView.image = UIImage(named: "element-anemo")
         case .cryo:
@@ -61,6 +57,8 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
             elementImageView.image = UIImage(named: "element-hydro")
         case .pyro:
             elementImageView.image = UIImage(named: "element-pyro")
+        case .none:
+            elementImageView.isHidden = true
         }
     }
 }
@@ -108,18 +106,19 @@ extension CharactersCollectionViewCell {
         })
         
         // Configure element image
-        let blurEffect = UIBlurEffect(style: .systemMaterial)
-        let infoVisualEffectView = UIVisualEffectView(effect: blurEffect)
-        infoVisualEffectView.layer.cornerRadius = 10
-        infoVisualEffectView.clipsToBounds = true
-        
-        add(infoVisualEffectView, then: {
-            $0.centerYTo(characterImageBackgroundView.topAnchor, constant: 15)
-            $0.centerXTo(characterImageBackgroundView.leadingAnchor, constant: 15)
-            $0.constrainHeight(20)
-            $0.constrainWidth($0.heightAnchor)
-        })
-        
+        if !elementImageView.isHidden {
+            let blurEffect = UIBlurEffect(style: .systemMaterial)
+            let infoVisualEffectView = UIVisualEffectView(effect: blurEffect)
+            infoVisualEffectView.layer.cornerRadius = 10
+            infoVisualEffectView.clipsToBounds = true
+            
+            add(infoVisualEffectView, then: {
+                $0.centerYTo(characterImageBackgroundView.topAnchor, constant: 15)
+                $0.centerXTo(characterImageBackgroundView.leadingAnchor, constant: 15)
+                $0.constrainHeight(20)
+                $0.constrainWidth($0.heightAnchor)
+            })
+        }
         add(elementImageView, then: {
             $0.centerYTo(characterImageBackgroundView.topAnchor, constant: 15)
             $0.centerXTo(characterImageBackgroundView.leadingAnchor, constant: 15)

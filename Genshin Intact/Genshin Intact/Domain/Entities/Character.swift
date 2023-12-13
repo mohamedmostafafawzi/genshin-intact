@@ -11,136 +11,106 @@ public typealias Characters = [Character]
 
 // MARK: - Character
 public struct Character {
-    let name: String
-    let title: String?
-    let vision: Vision
-    let weapon: Weapon
-    let nation: Nation
-    let affiliation: String
-    let rarity: CharacterRarity
-    let constellation: String
-    let birthday: String?
-    let description: String
-    let skillTalents: [SkillTalent]
-    let passiveTalents, constellations: [Constellation]
-    let visionKey: VisionKey
-    let weaponType: WeaponType
+    let name, fullname, title, description: String
+    let rarity: Rarity
+    let element: Element
+    let weapontype: Weapontype
+    let substat: String
     let gender: Gender
-    let specialDish: String?
-    let outfits: [Outfit]?
+    let body: Body
+    let association: Association
+    let region: Region
+    let affiliation, birthdaymmdd, birthday, constellation: String
+    let cv: Cv
+    let costs: Costs
+    let images: Images
+    let url: String?
+    let version: String
 }
 
-// MARK: - Constellation
-public struct Constellation {
+public enum Rarity: String {
+    case fiveStar = "5"
+    case fourStar = "4"
+}
+
+public enum Association: String {
+    case fatui = "FATUI"
+    case fontaine = "FONTAINE"
+    case inazuma = "INAZUMA"
+    case liyue = "LIYUE"
+    case mainactor = "MAINACTOR"
+    case mondstadt = "MONDSTADT"
+    case ranger = "RANGER"
+    case sumeru = "SUMERU"
+}
+
+public enum Body: String {
+    case boy = "BOY"
+    case girl = "GIRL"
+    case lady = "LADY"
+    case loli = "LOLI"
+    case male = "MALE"
+}
+
+// MARK: - Costs
+public struct Costs {
+    let ascend1, ascend2, ascend3, ascend4: [Ascend]
+    let ascend5, ascend6: [Ascend]
+}
+
+// MARK: - Ascend
+public struct Ascend: Codable {
     let name: String
-    let unlock: ConstellationUnlock
-    let description: String
-    let level: Int?
+    let count: Int
 }
 
-public enum ConstellationUnlock: String {
-    case constellationLV1 = "Constellation Lv. 1"
-    case constellationLV2 = "Constellation Lv. 2"
-    case constellationLV3 = "Constellation Lv. 3"
-    case constellationLV4 = "Constellation Lv. 4"
-    case constellationLV5 = "Constellation Lv. 5"
-    case constellationLV6 = "Constellation Lv. 6"
-    case unlockedAtAscension1 = "Unlocked at Ascension 1"
-    case unlockedAtAscension4 = "Unlocked at Ascension 4"
-    case unlockedAutomatically = "Unlocked Automatically"
+// MARK: - Cv
+public struct Cv {
+    let english, chinese, japanese, korean: String
 }
 
-public enum Nation: String {
-    case inazuma = "Inazuma"
-    case liyue = "Liyue"
-    case mondstadt = "Mondstadt"
-    case outlander = "Outlander"
-    case snezhnaya = "Snezhnaya"
-    case sumeru = "Sumeru"
-    case fontaine = "Fontaine"
-    case unknown = "Unknown"
-}
-
-public enum CharacterRarity: Int {
-    case fourStar = 4
-    case fiveStar = 5
-}
-
-// MARK: - Outfit
-public struct Outfit {
-    let type, name, description: String?
-    let rarity, price: Int?
-    let image: String?
-}
-
-// MARK: - SkillTalent
-public struct SkillTalent {
-    let name: String
-    let unlock: SkillTalentUnlock
-    let description: String
-    let type: TypeEnum?
-    let upgrades: [Upgrade]?
-}
-
-public enum TypeEnum: String {
-    case elementalBurst = "ELEMENTAL_BURST"
-    case elementalSkill = "ELEMENTAL_SKILL"
-    case normalAttack = "NORMAL_ATTACK"
-}
-
-public enum SkillTalentUnlock: String {
-    case elementalBurst = "Elemental Burst"
-    case elementalSkill = "Elemental Skill"
-    case normalAttack = "Normal Attack"
-    case rightClick = "Right Click"
-    case unlockElementalBurst = "Elemental burst"
-    case unlockElementalSkill = "Elemental skill"
-    case unlockNormalAttack = "Normal attack"
-}
-
-// MARK: - Upgrade
-public struct Upgrade {
-    let name, value: String
-}
-
-public enum Vision: String {
+public enum Element: String {
     case anemo = "Anemo"
     case cryo = "Cryo"
     case dendro = "Dendro"
     case electro = "Electro"
     case geo = "Geo"
     case hydro = "Hydro"
+    case none = "None"
     case pyro = "Pyro"
 }
 
-public enum VisionKey: String {
-    case anemo = "ANEMO"
-    case cryo = "CRYO"
-    case dendro = "DENDRO"
-    case electro = "ELECTRO"
-    case geo = "GEO"
-    case hydro = "HYDRO"
-    case pyro = "PYRO"
+public enum Gender: String {
+    case female = "Female"
+    case male = "Male"
 }
 
-public enum Weapon: String {
+// MARK: - Images
+public struct Images {
+    let image: String?
+    let card: String?
+    let portrait: String?
+    let icon, sideicon: String
+    let hoyolabAvatar: String?
+    let nameicon, nameiconcard, namesideicon: String
+    let cover1, cover2: String?
+    let namegachasplash, namegachaslice: String?
+}
+
+public enum Region: String {
+    case empty = ""
+    case fontaine = "Fontaine"
+    case inazuma = "Inazuma"
+    case liyue = "Liyue"
+    case mondstadt = "Mondstadt"
+    case snezhnaya = "Snezhnaya"
+    case sumeru = "Sumeru"
+}
+
+public enum Weapontype: String, Codable {
     case bow = "Bow"
     case catalyst = "Catalyst"
     case claymore = "Claymore"
     case polearm = "Polearm"
     case sword = "Sword"
-}
-
-public enum WeaponType: String {
-    case bow = "BOW"
-    case catalyst = "CATALYST"
-    case claymore = "CLAYMORE"
-    case polearm = "POLEARM"
-    case sword = "SWORD"
-}
-
-public enum Gender: String {
-    case male = "Male"
-    case female = "Female"
-    case unknown
 }

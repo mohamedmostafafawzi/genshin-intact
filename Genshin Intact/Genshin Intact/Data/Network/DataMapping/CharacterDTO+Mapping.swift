@@ -9,242 +9,160 @@ import Foundation
 
 // MARK: - Character
 struct CharacterDTO: Codable {
-    let name: String
-    let title: String?
-    let vision: VisionDTO
-    let weapon: WeaponDTO
-    let nation: NationDTO
-    let affiliation: String
-    let rarity: CharacterRarityDTO
-    let constellation: String
-    let birthday: String?
-    let description: String
-    let skillTalents: [SkillTalentDTO]
-    let passiveTalents, constellations: [ConstellationDTO]
-    let visionKey: VisionKeyDTO
-    let weaponType: WeaponTypeDTO
-    let gender: GenderDTO?
-    let specialDish: String?
-    let outfits: [OutfitDTO]?
-
-    enum CodingKeys: String, CodingKey {
-        case name, title, vision, weapon, nation, affiliation, rarity, constellation, birthday, description, skillTalents, passiveTalents, constellations
-        case visionKey = "vision_key"
-        case weaponType = "weapon_type"
-        case gender, specialDish, outfits
-    }
+    let name, fullname, title, description: String
+    let rarity: RarityDTO
+    let element: ElementDTO
+    let weapontype: WeapontypeDTO
+    let substat: String
+    let gender: GenderDTO
+    let body: BodyDTO
+    let association: AssociationDTO
+    let region: RegionDTO
+    let affiliation, birthdaymmdd, birthday, constellation: String
+    let cv: CvDTO
+    let costs: CostsDTO
+    let images: ImagesDTO
+    let url: URLClassDTO?
+    let version: String
 }
 
 extension CharacterDTO {
     func toDomain() -> Character {
-        return Character(
+        .init(
             name: name,
+            fullname: fullname,
             title: title,
-            vision: vision.toDomain(),
-            weapon: weapon.toDomain(),
-            nation: nation.toDomain(),
-            affiliation: affiliation,
+            description: description,
             rarity: rarity.toDomain(),
-            constellation: constellation,
+            element: element.toDomain(),
+            weapontype: weapontype.toDomain(),
+            substat: substat,
+            gender: gender.toDomain(),
+            body: body.toDomain(),
+            association: association.toDomain(),
+            region: region.toDomain(),
+            affiliation: affiliation,
+            birthdaymmdd: birthdaymmdd,
             birthday: birthday,
-            description: description,
-            skillTalents: skillTalents.map { $0.toDomain() },
-            passiveTalents: passiveTalents.map { $0.toDomain() },
-            constellations: constellations.map { $0.toDomain() },
-            visionKey: visionKey.toDomain(),
-            weaponType: weaponType.toDomain(),
-            gender: gender?.toDomain() ?? .unknown,
-            specialDish: specialDish,
-            outfits: outfits?.map { $0.toDomain() }
+            constellation: constellation,
+            cv: cv.toDomain(),
+            costs: costs.toDomain(),
+            images: images.toDomain(),
+            url: url?.fandom,
+            version: version
         )
     }
 }
 
-
-// MARK: - Constellation
-struct ConstellationDTO: Codable {
-    let name: String
-    let unlock: ConstellationUnlockDTO
-    let description: String
-    let level: Int?
+enum RarityDTO: String, Codable {
+    case fiveStar = "5"
+    case fourStar = "4"
 }
 
-extension ConstellationDTO {
-    func toDomain() -> Constellation {
-        return Constellation(
-            name: name,
-            unlock: unlock.toDomain(),
-            description: description,
-            level: level
-        )
-    }
-}
-
-enum ConstellationUnlockDTO: String, Codable {
-    case constellationLV1 = "Constellation Lv. 1"
-    case constellationLV2 = "Constellation Lv. 2"
-    case constellationLV3 = "Constellation Lv. 3"
-    case constellationLV4 = "Constellation Lv. 4"
-    case constellationLV5 = "Constellation Lv. 5"
-    case constellationLV6 = "Constellation Lv. 6"
-    case unlockedAtAscension1 = "Unlocked at Ascension 1"
-    case unlockedAtAscension4 = "Unlocked at Ascension 4"
-    case unlockedAutomatically = "Unlocked Automatically"
-}
-
-extension ConstellationUnlockDTO {
-    func toDomain() -> ConstellationUnlock {
+extension RarityDTO {
+    func toDomain() -> Rarity {
         switch self {
-        case .constellationLV1: return .constellationLV1
-        case .constellationLV2: return .constellationLV2
-        case .constellationLV3: return .constellationLV3
-        case .constellationLV4: return .constellationLV4
-        case .constellationLV5: return .constellationLV5
-        case .constellationLV6: return .constellationLV6
-        case .unlockedAtAscension1: return .unlockedAtAscension1
-        case .unlockedAtAscension4: return .unlockedAtAscension4
-        case .unlockedAutomatically: return .unlockedAutomatically
-        }
-    }
-}
-
-enum NationDTO: String, Codable {
-    case inazuma = "Inazuma"
-    case liyue = "Liyue"
-    case mondstadt = "Mondstadt"
-    case outlander = "Outlander"
-    case snezhnaya = "Snezhnaya"
-    case sumeru = "Sumeru"
-    case fontaine = "Fontaine"
-    case unknown = "Unknown"
-}
-
-extension NationDTO {
-    func toDomain() -> Nation {
-        return Nation(rawValue: rawValue) ?? .unknown
-    }
-}
-
-enum CharacterRarityDTO: Int, Codable {
-    case fourStar = 4
-    case fiveStar = 5
-}
-
-extension CharacterRarityDTO {
-    func toDomain() -> CharacterRarity {
-        switch self {
-        case .fourStar: return .fourStar
         case .fiveStar: return .fiveStar
+        case .fourStar: return .fourStar
         }
     }
 }
 
-
-// MARK: - Outfit
-struct OutfitDTO: Codable {
-    let type, name, description: String?
-    let rarity, price: Int?
-    let image: String?
+enum AssociationDTO: String, Codable {
+    case fatui = "FATUI"
+    case fontaine = "FONTAINE"
+    case inazuma = "INAZUMA"
+    case liyue = "LIYUE"
+    case mainactor = "MAINACTOR"
+    case mondstadt = "MONDSTADT"
+    case ranger = "RANGER"
+    case sumeru = "SUMERU"
 }
 
-extension OutfitDTO {
-    func toDomain() -> Outfit {
-        return Outfit(
-            type: type,
-            name: name,
-            description: description,
-            rarity: rarity,
-            price: price,
-            image: image
-        )
+extension AssociationDTO {
+    func toDomain() -> Association {
+        switch self {
+        case .fatui: return .fatui
+        case .fontaine: return .fontaine
+        case .inazuma: return .inazuma
+        case .liyue: return .liyue
+        case .mainactor: return .mainactor
+        case .mondstadt: return .mondstadt
+        case .ranger: return .ranger
+        case .sumeru: return .sumeru
+        }
     }
 }
 
+enum BodyDTO: String, Codable {
+    case boy = "BOY"
+    case girl = "GIRL"
+    case lady = "LADY"
+    case loli = "LOLI"
+    case male = "MALE"
+}
 
-// MARK: - SkillTalent
-struct SkillTalentDTO: Codable {
+extension BodyDTO {
+    func toDomain() -> Body {
+        switch self {
+        case .boy: return .boy
+        case .girl: return .girl
+        case .lady: return .lady
+        case .loli: return .loli
+        case .male: return .male
+        }
+    }
+}
+
+// MARK: - Costs
+struct CostsDTO: Codable {
+    let ascend1, ascend2, ascend3, ascend4: [Ascend]
+    let ascend5, ascend6: [Ascend]
+}
+
+extension CostsDTO {
+    func toDomain() -> Costs {
+        .init(ascend1: ascend1, ascend2: ascend2, ascend3: ascend3, ascend4: ascend4,
+              ascend5: ascend5, ascend6: ascend6)
+    }
+}
+// MARK: - Ascend
+struct AscendDTO: Codable {
     let name: String
-    let unlock: SkillTalentUnlockDTO
-    let description: String
-    let type: TypeEnumDTO?
-    let upgrades: [UpgradeDTO]?
+    let count: Int
 }
 
-extension SkillTalentDTO {
-    func toDomain() -> SkillTalent {
-        return SkillTalent(
-            name: name,
-            unlock: unlock.toDomain(),
-            description: description,
-            type: type?.toDomain(),
-            upgrades: upgrades?.map { $0.toDomain() } ?? []
-        )
+extension AscendDTO {
+    func toDomain() -> Ascend {
+        .init(name: name, count: count)
     }
 }
 
-enum TypeEnumDTO: String, Codable {
-    case elementalBurst = "ELEMENTAL_BURST"
-    case elementalSkill = "ELEMENTAL_SKILL"
-    case normalAttack = "NORMAL_ATTACK"
+// MARK: - Cv
+struct CvDTO: Codable {
+    let english, chinese, japanese, korean: String
 }
 
-extension TypeEnumDTO {
-    func toDomain() -> TypeEnum {
-        switch self {
-        case .elementalBurst: return .elementalBurst
-        case .elementalSkill: return .elementalSkill
-        case .normalAttack: return .normalAttack
-        }
+extension CvDTO {
+    func toDomain() -> Cv {
+        .init(english: english, chinese: chinese,
+              japanese: japanese, korean: korean)
     }
 }
 
-enum SkillTalentUnlockDTO: String, Codable {
-    case elementalBurst = "Elemental Burst"
-    case elementalSkill = "Elemental Skill"
-    case normalAttack = "Normal Attack"
-    case rightClick = "Right Click"
-    case unlockElementalBurst = "Elemental burst"
-    case unlockElementalSkill = "Elemental skill"
-    case unlockNormalAttack = "Normal attack"
-}
-
-extension SkillTalentUnlockDTO {
-    func toDomain() -> SkillTalentUnlock {
-        switch self {
-        case .elementalBurst: return .elementalBurst
-        case .elementalSkill: return .elementalSkill
-        case .normalAttack: return .normalAttack
-        case .rightClick: return .rightClick
-        case .unlockElementalBurst: return .unlockElementalBurst
-        case .unlockElementalSkill: return .unlockElementalSkill
-        case .unlockNormalAttack: return .unlockNormalAttack
-        }
-    }
-}
-
-// MARK: - Upgrade
-struct UpgradeDTO: Codable {
-    let name, value: String
-}
-
-extension UpgradeDTO {
-    func toDomain() -> Upgrade {
-        return Upgrade(name: name, value: value)
-    }
-}
-
-enum VisionDTO: String, Codable {
+enum ElementDTO: String, Codable {
     case anemo = "Anemo"
     case cryo = "Cryo"
     case dendro = "Dendro"
     case electro = "Electro"
     case geo = "Geo"
     case hydro = "Hydro"
+    case none = "None"
     case pyro = "Pyro"
 }
 
-extension VisionDTO {
-    func toDomain() -> Vision {
+extension ElementDTO {
+    func toDomain() -> Element {
         switch self {
         case .anemo: return .anemo
         case .cryo: return .cryo
@@ -252,86 +170,96 @@ extension VisionDTO {
         case .electro: return .electro
         case .geo: return .geo
         case .hydro: return .hydro
+        case .none: return .none
         case .pyro: return .pyro
         }
     }
 }
 
-enum VisionKeyDTO: String, Codable {
-    case anemo = "ANEMO"
-    case cryo = "CRYO"
-    case dendro = "DENDRO"
-    case electro = "ELECTRO"
-    case geo = "GEO"
-    case hydro = "HYDRO"
-    case pyro = "PYRO"
+enum GenderDTO: String, Codable {
+    case female = "Female"
+    case male = "Male"
 }
 
-extension VisionKeyDTO {
-    func toDomain() -> VisionKey {
+extension GenderDTO {
+    func toDomain() -> Gender {
         switch self {
-        case .anemo: return .anemo
-        case .cryo: return .cryo
-        case .dendro: return .dendro
-        case .electro: return .electro
-        case .geo: return .geo
-        case .hydro: return .hydro
-        case .pyro: return .pyro
+        case .female: return .female
+        case .male: return .male
         }
     }
 }
 
-enum WeaponDTO: String, Codable {
+// MARK: - Images
+struct ImagesDTO: Codable {
+    let image: String?
+    let card: String?
+    let portrait: String?
+    let icon, sideicon: String
+    let hoyolabAvatar: String?
+    let nameicon, nameiconcard, namesideicon: String
+    let cover1, cover2: String?
+    let namegachasplash, namegachaslice: String?
+
+    enum CodingKeys: String, CodingKey {
+        case image, card, portrait, icon, sideicon
+        case hoyolabAvatar = "hoyolab-avatar"
+        case nameicon, nameiconcard, namesideicon, cover1, cover2, namegachasplash, namegachaslice
+    }
+}
+
+extension ImagesDTO {
+    func toDomain() -> Images {
+        .init(image: image, card: card, portrait: portrait, icon: icon, sideicon: sideicon, hoyolabAvatar: hoyolabAvatar,
+              nameicon: nameicon, nameiconcard: nameiconcard, namesideicon: namesideicon, cover1: cover1, cover2: cover2,
+              namegachasplash: namegachasplash, namegachaslice: namegachaslice)
+    }
+}
+
+enum RegionDTO: String, Codable {
+    case empty = ""
+    case fontaine = "Fontaine"
+    case inazuma = "Inazuma"
+    case liyue = "Liyue"
+    case mondstadt = "Mondstadt"
+    case snezhnaya = "Snezhnaya"
+    case sumeru = "Sumeru"
+}
+
+extension RegionDTO {
+    func toDomain() -> Region {
+        switch self {
+        case .empty: return .empty
+        case .fontaine: return .fontaine
+        case .inazuma: return .inazuma
+        case .liyue: return .liyue
+        case .mondstadt: return .mondstadt
+        case .snezhnaya: return .snezhnaya
+        case .sumeru: return .sumeru
+        }
+    }
+}
+
+// MARK: - URLClass
+struct URLClassDTO: Codable {
+    let fandom: String
+}
+
+enum WeapontypeDTO: String, Codable {
     case bow = "Bow"
     case catalyst = "Catalyst"
     case claymore = "Claymore"
     case polearm = "Polearm"
     case sword = "Sword"
 }
-
-extension WeaponDTO {
-    func toDomain() -> Weapon {
+extension WeapontypeDTO {
+    func toDomain() -> Weapontype {
         switch self {
         case .bow: return .bow
         case .catalyst: return .catalyst
         case .claymore: return .claymore
         case .polearm: return .polearm
         case .sword: return .sword
-        }
-    }
-}
-
-
-enum WeaponTypeDTO: String, Codable {
-    case bow = "BOW"
-    case catalyst = "CATALYST"
-    case claymore = "CLAYMORE"
-    case polearm = "POLEARM"
-    case sword = "SWORD"
-}
-
-extension WeaponTypeDTO {
-    func toDomain() -> WeaponType {
-        switch self {
-        case .bow: return .bow
-        case .catalyst: return .catalyst
-        case .claymore: return .claymore
-        case .polearm: return .polearm
-        case .sword: return .sword
-        }
-    }
-}
-
-enum GenderDTO: String, Codable {
-    case male = "Male"
-    case female = "Female"
-}
-
-extension GenderDTO {
-    func toDomain() -> Gender {
-        switch self {
-        case .male: return .male
-        case .female: return .female
         }
     }
 }

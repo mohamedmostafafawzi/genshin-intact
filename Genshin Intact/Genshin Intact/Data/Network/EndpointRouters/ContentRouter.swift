@@ -20,14 +20,20 @@ enum ContentRouter: EndpointRouter {
     var path: String {
         switch self {
         case .getCharacters:
-            return "characters/all"
+            return "characters"
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        default:
-            return nil
+        case .getCharacters:
+            return [
+                "query": "names",
+                "matchNames": "false",
+                "matchAltNames": "false",
+                "matchCategories": "true",
+                "verboseCategories": "true"
+            ]
         }
     }
     

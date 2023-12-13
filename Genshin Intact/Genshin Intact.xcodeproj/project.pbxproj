@@ -71,7 +71,6 @@
 		706199972B06EB3100762BAF /* UIActivityIndicator+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */; };
 		70D557D42B1F73F600DFA6D6 /* CharactersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D557D32B1F73F600DFA6D6 /* CharactersCollectionViewCell.swift */; };
 		70D557D62B1F741600DFA6D6 /* CharactersCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D557D52B1F741600DFA6D6 /* CharactersCollectionViewCellViewModel.swift */; };
-		70D557D82B1F78CC00DFA6D6 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D557D72B1F78CC00DFA6D6 /* ImageAsset.swift */; };
 		70D557E62B1F8B6900DFA6D6 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557DD2B1F8B6100DFA6D6 /* SourceSansPro-Black.ttf */; };
 		70D557E72B1F8B6D00DFA6D6 /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557DC2B1F8B6100DFA6D6 /* SourceSansPro-Light.ttf */; };
 		70D557E82B1F8B6D00DFA6D6 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D557E22B1F8B6200DFA6D6 /* SourceSansPro-Bold.ttf */; };
@@ -101,6 +100,7 @@
 		70E844212B07FA6A001525FD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E844202B07FA6A001525FD /* Character.swift */; };
 		70E844232B07FB4E001525FD /* CharacterDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */; };
 		70F322832B28C3B50041B835 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F322822B28C3B50041B835 /* GradientView.swift */; };
+		70F322852B292C500041B835 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F322842B292C500041B835 /* ImageAsset.swift */; };
 		B29938E6B217597BA6A46A3B /* Pods_Genshin_Intact_Genshin_IntactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC41EDD50F135F2DB4F41C4F /* Pods_Genshin_Intact_Genshin_IntactUITests.framework */; };
 		B595E8A36F5A70330F8F08BA /* Pods_Genshin_IntactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */; };
 /* End PBXBuildFile section */
@@ -194,7 +194,6 @@
 		706199962B06EB3100762BAF /* UIActivityIndicator+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Styling.swift"; sourceTree = "<group>"; };
 		70D557D32B1F73F600DFA6D6 /* CharactersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewCell.swift; sourceTree = "<group>"; };
 		70D557D52B1F741600DFA6D6 /* CharactersCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
-		70D557D72B1F78CC00DFA6D6 /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		70D557DA2B1F8B6100DFA6D6 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
 		70D557DB2B1F8B6100DFA6D6 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
 		70D557DC2B1F8B6100DFA6D6 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
@@ -224,6 +223,7 @@
 		70E844202B07FA6A001525FD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		70E844222B07FB4E001525FD /* CharacterDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterDTO+Mapping.swift"; sourceTree = "<group>"; };
 		70F322822B28C3B50041B835 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		70F322842B292C500041B835 /* ImageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		8370438D27AC655DDE54E4B7 /* Pods-Genshin Intact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin Intact.release.xcconfig"; path = "Target Support Files/Pods-Genshin Intact/Pods-Genshin Intact.release.xcconfig"; sourceTree = "<group>"; };
 		84A23CB34CF01D3E534190E2 /* Pods-Genshin IntactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genshin IntactTests.debug.xcconfig"; path = "Target Support Files/Pods-Genshin IntactTests/Pods-Genshin IntactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94B5B2F242775C2BC52BEE28 /* Pods_Genshin_IntactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genshin_IntactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,7 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				70E844202B07FA6A001525FD /* Character.swift */,
-				70D557D72B1F78CC00DFA6D6 /* ImageAsset.swift */,
+				70F322842B292C500041B835 /* ImageAsset.swift */,
 				7061990E2B068CDC00762BAF /* Others */,
 			);
 			path = Entities;
@@ -1105,7 +1105,6 @@
 				70E592412B0A6B7B00DEFC13 /* HomeCoordinatorFactory.swift in Sources */,
 				706199462B06D8A300762BAF /* AnchoredConstraints.swift in Sources */,
 				706199782B06E1B600762BAF /* Coordinator.swift in Sources */,
-				70D557D82B1F78CC00DFA6D6 /* ImageAsset.swift in Sources */,
 				706199102B06A1C900762BAF /* GIError.swift in Sources */,
 				70F322832B28C3B50041B835 /* GradientView.swift in Sources */,
 				706199262B06AED000762BAF /* ContentUseCase.swift in Sources */,
@@ -1120,6 +1119,7 @@
 				706199532B06DB9600762BAF /* UITableViewCell+Dequeue.swift in Sources */,
 				706198CC2B067F7500762BAF /* AppDelegate.swift in Sources */,
 				7061995D2B06DD4B00762BAF /* UIView+Styling.swift in Sources */,
+				70F322852B292C500041B835 /* ImageAsset.swift in Sources */,
 				7061993B2B06D73000762BAF /* NiblessTableViewHeaderFooterView.swift in Sources */,
 				70E5923E2B0A6B5E00DEFC13 /* HomeCoordinatorNavigationDelegate.swift in Sources */,
 				70D5582F2B220A9600DFA6D6 /* CharacterDetailsViewModel.swift in Sources */,
