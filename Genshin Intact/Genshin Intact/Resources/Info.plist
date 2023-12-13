@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BASE_URL</key>
-	<string>https://genshin.jmp.blue/</string>
+	<string>https://genshin-db-api.vercel.app/api/</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SourceSansPro-SemiBoldItalic.ttf</string>

@@ -14,7 +14,7 @@ public struct ImageAsset {
     init(character: Character, assetType: AssetType) {
         guard character.name != "Traveler" else {
             self.characterName = character.name.lowercased()
-            let vision = character.vision.rawValue.lowercased()
+            let vision = character.element.rawValue.lowercased()
             self.imageURL = "https://api.genshin.dev/characters/\(characterName)-\(vision)/\(assetType.rawValue)-aether"
             return
         }
