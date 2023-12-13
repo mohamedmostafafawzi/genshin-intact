@@ -9,20 +9,8 @@ import UIKit
 
 // MARK: - Font Parts
 public extension UIFont {
-// TODO :- Replace font "SourceSansPro" with actual font
     enum FontWeight: String {
-        case extraLight = "SourceSansPro-ExtraLight"
-        case extraLightItalic = "SourceSansPro-ExtraLightItalic"
-        case light = "SourceSansPro-Light"
-        case lightItalic = "SourceSansPro-LightItalic"
-        case regular = "SourceSansPro-Regular"
-        case italic = "SourceSansPro-Italic"
-        case semiBold = "SourceSansPro-SemiBold"
-        case semiBoldItalic = "SourceSansPro-SemiBoldItalic"
-        case bold = "SourceSansPro-Bold"
-        case boldItalic = "SourceSansPro-BoldItalic"
-        case black = "SourceSansPro-Black"
-        case blackItalic = "SourceSansPro-BlackItalic"
+        case regular = "HYWenHei"
     }
 
     enum FontSize: CGFloat {
@@ -43,44 +31,9 @@ public extension UIFont {
         }
     }
     
-    /// Weight: 200
-    static func extraLight(size: FontSize, italic: Bool = false, scalable: Bool = false) -> UIFont {
-        return getCustomFont(weight: italic ? .extraLightItalic : .extraLight,
-                             size: CGFloat(size.rawValue),
-                             scalable: scalable)
-    }
-    
-    /// Weight: 300
-    static func light(size: FontSize, italic: Bool = false, scalable: Bool = false) -> UIFont {
-        return getCustomFont(weight: italic ? .lightItalic : .light,
-                             size: CGFloat(size.rawValue),
-                             scalable: scalable)
-    }
-    
     /// Weight: 400
-    static func regular(size: FontSize, italic: Bool = false, scalable: Bool = false) -> UIFont {
-        return getCustomFont(weight: italic ? .italic : .regular,
-                             size: CGFloat(size.rawValue),
-                             scalable: scalable)
-    }
-    
-    /// Weight: 600
-    static func semiBold(size: FontSize, italic: Bool = false, scalable: Bool = false) -> UIFont {
-        return getCustomFont(weight: italic ? .semiBoldItalic : .semiBold,
-                             size: CGFloat(size.rawValue),
-                             scalable: scalable)
-    }
-    
-    /// Weight: 700
-    static func bold(size: FontSize, italic: Bool = false, scalable: Bool = false) -> UIFont {
-        return getCustomFont(weight: italic ? .boldItalic : .bold,
-                             size: CGFloat(size.rawValue),
-                             scalable: scalable)
-    }
-    
-    /// Weight: 900
-    static func black(size: FontSize, italic: Bool = false, scalable: Bool = false) -> UIFont {
-        return getCustomFont(weight: italic ? .blackItalic : .black,
+    static func regular(size: FontSize, scalable: Bool = false) -> UIFont {
+        return getCustomFont(weight: .regular,
                              size: CGFloat(size.rawValue),
                              scalable: scalable)
     }

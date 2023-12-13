@@ -13,7 +13,10 @@ class HomeRootView: NiblessView {
     private let logoImageView = UIImageView().style(tintColor: .homeTopIcon,
                                                     image: UIImage(named: "home-logo"),
                                                     contentMode: .scaleAspectFit)
-    
+    private let homeLabel = UILabel().style(font: .regular(size: .h1),
+                                             textColor: .headerText,
+                                             textAlignment: .left,
+                                             numberOfLines: 2)
     private lazy var collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .vertical
@@ -40,6 +43,7 @@ class HomeRootView: NiblessView {
     override func viewHierarchyDidConfigure() {
         collectionView.registerCellFromClass(CharactersCollectionViewCell.self)
         backgroundColor = .background
+        homeLabel.text = " Browse \n your characters.."
     }
 }
 
@@ -53,9 +57,15 @@ extension HomeRootView {
             $0.centerXToSuperview()
         })
         
+        add(homeLabel, then: {
+            $0.anchor(.top(logoImageView.bottomAnchor, constant: 8),
+                      .leading(safeAreaLayoutGuide.leadingAnchor, constant: 20))
+            $0.constrainWidth(safeAreaLayoutGuide.widthAnchor, multiplier: 0.8)
+        })
+        
         add(collectionView, then: {
             $0.anchor(.leading(safeAreaLayoutGuide.leadingAnchor),
-                      .top(logoImageView.bottomAnchor, constant: 16),
+                      .top(homeLabel.bottomAnchor, constant: 16),
                       .trailing(safeAreaLayoutGuide.trailingAnchor),
                       .bottom(safeAreaLayoutGuide.bottomAnchor))
         })

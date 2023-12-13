@@ -18,6 +18,7 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
                                              textColor: .headerLightContentText,
                                              textAlignment: .center,
                                              numberOfLines: 1)
+    private let infoVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
     private let elementImageView = UIImageView().style(image: UIImage(named: "image-placeholder"),
                                                        contentMode: .scaleAspectFill,
                                                        cornerRadius: 15)
@@ -42,6 +43,7 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
         }
         
         elementImageView.isHidden = false
+        infoVisualEffectView.isHidden = false
         switch viewModel.element {
         case .anemo:
             elementImageView.image = UIImage(named: "element-anemo")
@@ -59,6 +61,7 @@ class CharactersCollectionViewCell: NiblessCollectionViewCell {
             elementImageView.image = UIImage(named: "element-pyro")
         case .none:
             elementImageView.isHidden = true
+            infoVisualEffectView.isHidden = true
         }
     }
 }
@@ -106,19 +109,16 @@ extension CharactersCollectionViewCell {
         })
         
         // Configure element image
-        if !elementImageView.isHidden {
-            let blurEffect = UIBlurEffect(style: .systemMaterial)
-            let infoVisualEffectView = UIVisualEffectView(effect: blurEffect)
-            infoVisualEffectView.layer.cornerRadius = 10
-            infoVisualEffectView.clipsToBounds = true
-            
-            add(infoVisualEffectView, then: {
-                $0.centerYTo(characterImageBackgroundView.topAnchor, constant: 15)
-                $0.centerXTo(characterImageBackgroundView.leadingAnchor, constant: 15)
-                $0.constrainHeight(20)
-                $0.constrainWidth($0.heightAnchor)
-            })
-        }
+        infoVisualEffectView.layer.cornerRadius = 10
+        infoVisualEffectView.clipsToBounds = true
+        
+        add(infoVisualEffectView, then: {
+            $0.centerYTo(characterImageBackgroundView.topAnchor, constant: 15)
+            $0.centerXTo(characterImageBackgroundView.leadingAnchor, constant: 15)
+            $0.constrainHeight(20)
+            $0.constrainWidth($0.heightAnchor)
+        })
+        
         add(elementImageView, then: {
             $0.centerYTo(characterImageBackgroundView.topAnchor, constant: 15)
             $0.centerXTo(characterImageBackgroundView.leadingAnchor, constant: 15)

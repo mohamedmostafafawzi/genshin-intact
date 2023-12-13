@@ -23,7 +23,7 @@ public extension UIColor {
     static let fiveStars = ColorPalette.fiveStars
 
     // MARK: - Text Semantic Colors
-    static let headerText = evaluateColor(light: ColorPalette.black,
+    static let headerText = evaluateColor(light: ColorPalette.darkGrey,
                                           dark: ColorPalette.white)
     static let headerPrimaryLightContentText = ColorPalette.black
     static let primaryText = evaluateColor(light: ColorPalette.darkestGrey,
